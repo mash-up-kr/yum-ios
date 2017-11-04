@@ -17,6 +17,21 @@ final class SearchViewContoller: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initFeedCellForEstimatedHeight()
+        refreshControl?.addTarget(self, action: #selector(SearchViewContoller.refreshingDidChange), for: .valueChanged)
+        
+        // TODO: call feed api
+    }
+    
+    deinit {
+        refreshControl?.removeTarget(self, action: #selector(SearchViewContoller.refreshingDidChange), for: .valueChanged)
+    }
+    
+    @objc func refreshingDidChange() {
+        // TODO: call feed api
+        Async.main(after: 2) {
+            self.refreshControl?.endRefreshing()
+            Async.main(after: 0.5) { UIView.transition(with: self.tableView, duration: 0.3, options: .transitionCrossDissolve, animations: self.tableView.reloadData) }
+        }
     }
     
 }

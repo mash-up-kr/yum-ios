@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BABAA1FADE75900A11BA0 /* PostViewController.swift */; };
 		277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */; };
+		A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B8D6A1FAE3D6E00B81622 /* Async.swift */; };
 		A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690601FADDD7B00B9FCEF /* AppDelegate.swift */; };
 		A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690621FADDD7B00B9FCEF /* TabBarController.swift */; };
 		A67690661FADDD7B00B9FCEF /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67690641FADDD7B00B9FCEF /* TabBarController.storyboard */; };
@@ -39,6 +40,7 @@
 		277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
 		724657326AEB08C3FDE78ED8 /* Pods-Yum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.debug.xcconfig"; sourceTree = "<group>"; };
 		872B75EE6CF321E323619E70 /* Pods_Yum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A60B8D6A1FAE3D6E00B81622 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		A676905D1FADDD7B00B9FCEF /* Yum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67690601FADDD7B00B9FCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A67690621FADDD7B00B9FCEF /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		A67690781FADE11000B9FCEF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A60B8D6A1FAE3D6E00B81622 /* Async.swift */,
 				A67690791FADE12B00B9FCEF /* NSObject+Yum.swift */,
 				A676907C1FADE86100B9FCEF /* UIStoryboard+Yum.swift */,
 				A67690951FADF52700B9FCEF /* UITableView+Yum.swift */,
@@ -391,6 +394,7 @@
 				277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */,
 				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,
 				A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */,
+				A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */,
 				A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
