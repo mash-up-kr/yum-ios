@@ -23,6 +23,7 @@
 		A676908D1FADEA6F00B9FCEF /* SearchNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676908C1FADEA6F00B9FCEF /* SearchNavigationController.storyboard */; };
 		A676908F1FADEA9000B9FCEF /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676908E1FADEA9000B9FCEF /* SearchNavigationController.swift */; };
 		A67690921FADECD000B9FCEF /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690911FADECD000B9FCEF /* DummyViewController.swift */; };
+		A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */; };
 		B09ABBC47978499AC017F5BA /* Pods_Yum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872B75EE6CF321E323619E70 /* Pods_Yum.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		A676908C1FADEA6F00B9FCEF /* SearchNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchNavigationController.storyboard; sourceTree = "<group>"; };
 		A676908E1FADEA9000B9FCEF /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		A67690911FADECD000B9FCEF /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Yum.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				A67690791FADE12B00B9FCEF /* NSObject+Yum.swift */,
 				A676907C1FADE86100B9FCEF /* UIStoryboard+Yum.swift */,
+				A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				A67690861FADE94300B9FCEF /* SearchViewContoller.swift in Sources */,
 				A676908F1FADEA9000B9FCEF /* SearchNavigationController.swift in Sources */,
 				A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */,
+				A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */,
 				A67690921FADECD000B9FCEF /* DummyViewController.swift in Sources */,
 				A676908B1FADEA3100B9FCEF /* HomeNavigationController.swift in Sources */,
 				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,

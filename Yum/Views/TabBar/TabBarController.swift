@@ -24,7 +24,7 @@ extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         switch viewController {
         case is DummyViewController:
-            print("present PostViewController") // TODO: 쓰기 화면 호출
+            present(HomeNavigationController.instantiate(), animated: true, completion: nil) // TODO: 이와 같이 쓰기 화면 호출
             return false
         default:
             return true

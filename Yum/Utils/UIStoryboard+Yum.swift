@@ -10,7 +10,7 @@ import UIKit
 
 extension UIStoryboard {
     
-    func instantiate<VC: UIViewController>() -> VC {
+    func instantiateViewController<VC: UIViewController>() -> VC {
         return instantiateViewController(withIdentifier: VC.className) as! VC // swiftlint:disable:this force_cast
     }
     
