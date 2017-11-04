@@ -12,15 +12,14 @@ final class HomeViewController: UITableViewController {
     
     private var feedCellForEstimatedHeight: FeedCell!
     
-    private var feeds: [Feed] = Feed.sampleFeeds
+    private var feeds: [Feed] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initFeedCellForEstimatedHeight()
         refreshControl?.addTarget(self, action: #selector(HomeViewController.refreshingDidChange), for: .valueChanged)
         setTitleView()
-        
-        // TODO: call feed api
+        loadFeeds()
     }
     
     deinit {
@@ -28,11 +27,7 @@ final class HomeViewController: UITableViewController {
     }
     
     @objc func refreshingDidChange() {
-        // TODO: call feed api
-        Async.main(after: 2) {
-            self.refreshControl?.endRefreshing()
-            Async.main(after: 0.5) { UIView.transition(with: self.tableView, duration: 0.3, options: .transitionCrossDissolve, animations: self.tableView.reloadData) }
-        }
+        loadFeeds()
     }
     
 }
@@ -58,6 +53,15 @@ extension HomeViewController {
         view.addSubview(titleImageView)
         
         navigationItem.titleView = view
+    }
+    
+    private func loadFeeds() {
+        refreshControl?.beginRefreshing()
+        Feed.getFeeds { feeds in
+            self.feeds = feeds
+            self.refreshControl?.endRefreshing()
+            Async.main(after: 0.5) { UIView.transition(with: self.tableView, duration: 0.3, options: .transitionCrossDissolve, animations: self.tableView.reloadData) }
+        }
     }
     
 }

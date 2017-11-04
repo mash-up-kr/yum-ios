@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct Feed: Codable {
     
@@ -15,13 +16,95 @@ struct Feed: Codable {
     var foodImageUrl: String?
     var body: String?
     var calorie: Int?
-    var tags: [String] = []
+    var tagsString: String?
+    
+    var tags: [String] {
+        get { return tagsString?.components(separatedBy: ",") ?? [] }
+        set { tagsString = tags.joined(separator: ",") }
+    }
+    
+    init() {
+        
+    }
     
     init(userProfileImageUrl: String? = nil, userName: String? = nil, foodImageUrl: String? = nil, body: String? = nil) {
         self.userProfileImageUrl = userProfileImageUrl
         self.userName = userName
         self.foodImageUrl = foodImageUrl
         self.body = body
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case userProfileImageUrl = "userProfileImageUrl"
+        case userName = "nickname"
+        case foodImageUrl = "img_url"
+        case body = "content"
+        case calorie = "calorie"
+        case tagsString = "hashtags"
+    }
+    
+}
+
+extension Feed {
+    
+    static func getFeeds(completed: @escaping ([Feed]) -> Void) {
+        Alamofire
+            .request("http://192.168.0.57:3003/post/get_feed", method: .get, encoding: URLEncoding.default)
+            .log(level: .verbose)
+            .responseData { response in
+                guard let data = response.result.value, let getFeedsResponse = try? JSONDecoder().decode(GetFeedsResponse.self, from: data) else {
+                    completed([])
+                    return
+                }
+                completed(getFeedsResponse.feeds)
+            }
+    }
+    
+    struct GetFeedsResponse: Codable {
+        
+        var feeds: [Feed]
+        
+        enum CodingKeys: String, CodingKey { // swiftlint:disable:this nesting
+            case feeds = "results"
+        }
+        
+    }
+    
+}
+
+extension Feed {
+    
+    static func postFeed(feed: Feed, imageData: Data, completed: @escaping (Bool) -> Void) {
+        guard let userId = "rldndud123@a.com".data(using: .utf8), let content = feed.body?.data(using: .utf8), let calorie = String(feed.calorie ?? 0).data(using: .utf8) else {
+            completed(false)
+            return
+        }
+        let hashtags = NSKeyedArchiver.archivedData(withRootObject: feed.tags)
+        
+        let multipartFormData = { (multipartFormData: MultipartFormData) -> Void in
+//            multipartFormData.append(imageUrl, withName: "postImg")
+            multipartFormData.append(imageData, withName: "postImg")
+            multipartFormData.append(userId, withName: "userId")
+            multipartFormData.append(content, withName: "content")
+            multipartFormData.append(calorie, withName: "calorie")
+            multipartFormData.append(hashtags, withName: "hashtags")
+        }
+        Alamofire.upload(multipartFormData: multipartFormData, to: "http://192.168.0.57:3003/post/upload", method: .post) { result in
+            switch result {
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    debugPrint(response)
+                    
+                    guard response.result.isSuccess else {
+                        completed(false)
+                        return
+                    }
+                    completed(true)
+                }
+            case .failure:
+                completed(false)
+            }
+        }
     }
     
 }

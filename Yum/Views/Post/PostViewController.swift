@@ -58,7 +58,21 @@ class PostViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func doneClicked() {
-        print("done!")
+        guard let content = contentField.text, let calorie = Int(calorieField.text ?? ""), let image = imageView.image, let imageData = UIImagePNGRepresentation(image) else {
+            return
+        }
+        
+        var feed = Feed()
+        feed.body = content
+        feed.calorie = calorie
+        
+        Feed.postFeed(feed: feed, imageData: imageData) { success in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                
+            }
+        }
     }
     
     @IBAction func cancelClicked() {
