@@ -12,6 +12,7 @@
 		A67690661FADDD7B00B9FCEF /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67690641FADDD7B00B9FCEF /* MainViewController.storyboard */; };
 		A67690681FADDD7B00B9FCEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67690671FADDD7B00B9FCEF /* Assets.xcassets */; };
 		A676906B1FADDD7B00B9FCEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67690691FADDD7B00B9FCEF /* LaunchScreen.storyboard */; };
+		A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690791FADE12B00B9FCEF /* NSObject+Yum.swift */; };
 		B09ABBC47978499AC017F5BA /* Pods_Yum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872B75EE6CF321E323619E70 /* Pods_Yum.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		A67690671FADDD7B00B9FCEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A676906A1FADDD7B00B9FCEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A676906C1FADDD7B00B9FCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A67690791FADE12B00B9FCEF /* NSObject+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Yum.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				A67690601FADDD7B00B9FCEF /* AppDelegate.swift */,
 				A67690731FADDED500B9FCEF /* Views */,
+				A67690781FADE11000B9FCEF /* Utils */,
 				A67690671FADDD7B00B9FCEF /* Assets.xcassets */,
 				A67690721FADDEB700B9FCEF /* Supports */,
 			);
@@ -110,6 +113,14 @@
 				A67690641FADDD7B00B9FCEF /* MainViewController.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A67690781FADE11000B9FCEF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A67690791FADE12B00B9FCEF /* NSObject+Yum.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A67690631FADDD7B00B9FCEF /* MainViewController.swift in Sources */,
+				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,
 				A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
