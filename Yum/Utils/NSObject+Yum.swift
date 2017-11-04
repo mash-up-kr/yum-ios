@@ -15,4 +15,3 @@ extension NSObject {
     public var className: String { return type(of: self).className }
     
 }
-
