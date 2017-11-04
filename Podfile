@@ -8,4 +8,6 @@ target 'Yum' do
   
   pod 'Alamofire'
   pod 'AlamofireImage'
+
+  pod 'DKImagePickerController'
 end
