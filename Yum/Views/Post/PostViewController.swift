@@ -81,8 +81,4 @@ class PostViewController: UIViewController, UITextViewDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         keyboardShowing = false
     }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
 }
