@@ -18,6 +18,7 @@ final class SearchViewContoller: UITableViewController {
         super.viewDidLoad()
         initFeedCellForEstimatedHeight()
         refreshControl?.addTarget(self, action: #selector(SearchViewContoller.refreshingDidChange), for: .valueChanged)
+        setTitleView()
         
         // TODO: call feed api
     }
@@ -46,6 +47,17 @@ extension SearchViewContoller {
         feedCellForEstimatedHeight.isHidden = true
         feedCellForEstimatedHeight.forEstimatedHeight = true
         view.addSubview(feedCellForEstimatedHeight)
+    }
+    
+    private func setTitleView() {
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "navi-logo"))
+        titleImageView.contentMode = .scaleAspectFit
+        titleImageView.frame = CGRect(x: -30, y: -16, width: 60, height: 32)
+        
+        let view = UIView(frame: CGRect.zero)
+        view.addSubview(titleImageView)
+        
+        navigationItem.titleView = view
     }
     
 }
