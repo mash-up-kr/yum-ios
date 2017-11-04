@@ -19,6 +19,7 @@ class PostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var calorieField: UITextField!
     @IBOutlet weak var tagField: UITextView!
     @IBOutlet weak var tagPlaceholder: UILabel!
+    @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
     
     var pickerShowed = false
     var keyboardShowing = false
@@ -37,6 +38,10 @@ class PostViewController: UIViewController, UITextViewDelegate {
             let pickerController = DKImagePickerController()
             pickerController.maxSelectableCount = 1
             pickerController.didSelectAssets = { assets in
+                if assets.count == 0 {
+                    self.dismiss(animated: true)
+                }
+                
                 for img in assets {
                     img.fetchOriginalImageWithCompleteBlock { (image, _) in
                         self.image = image!
@@ -76,9 +81,15 @@ class PostViewController: UIViewController, UITextViewDelegate {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         keyboardShowing = true
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.scrollViewBottom.constant += keyboardSize.height
+        }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         keyboardShowing = false
+        if let _ = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.scrollViewBottom.constant = 0
+        }
     }
 }
