@@ -9,5 +9,6 @@ target 'Yum' do
   pod 'Alamofire'
   pod 'AlamofireImage'
   
+  pod 'DKImagePickerController'
   pod 'ManualLayout'
 end

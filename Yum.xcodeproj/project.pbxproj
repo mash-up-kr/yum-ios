@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BABAA1FADE75900A11BA0 /* PostViewController.swift */; };
+		277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */; };
 		A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690601FADDD7B00B9FCEF /* AppDelegate.swift */; };
 		A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690621FADDD7B00B9FCEF /* TabBarController.swift */; };
 		A67690661FADDD7B00B9FCEF /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67690641FADDD7B00B9FCEF /* TabBarController.storyboard */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		12EFC3298D8A124C4EE64F41 /* Pods-Yum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.release.xcconfig"; sourceTree = "<group>"; };
+		277BABAA1FADE75900A11BA0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
 		724657326AEB08C3FDE78ED8 /* Pods-Yum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.debug.xcconfig"; sourceTree = "<group>"; };
 		872B75EE6CF321E323619E70 /* Pods_Yum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A676905D1FADDD7B00B9FCEF /* Yum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yum.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		277BABA91FADE72B00A11BA0 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				277BABAA1FADE75900A11BA0 /* PostViewController.swift */,
+				277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 		3D7D3DECA3B858860C634AC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +149,7 @@
 				A67690741FADDEE400B9FCEF /* TabBar */,
 				A676907B1FADE80B00B9FCEF /* Home */,
 				A67690801FADE89B00B9FCEF /* Search */,
+				277BABA91FADE72B00A11BA0 /* Post */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +291,7 @@
 				A676906B1FADDD7B00B9FCEF /* LaunchScreen.storyboard in Resources */,
 				A676908D1FADEA6F00B9FCEF /* SearchNavigationController.storyboard in Resources */,
 				A67690891FADEA0900B9FCEF /* HomeNavigationController.storyboard in Resources */,
+				277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */,
 				A67690681FADDD7B00B9FCEF /* Assets.xcassets in Resources */,
 				A67690661FADDD7B00B9FCEF /* TabBarController.storyboard in Resources */,
 			);
@@ -326,12 +341,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Yum/Pods-Yum-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/ManualLayout/ManualLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ManualLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +388,7 @@
 				A67690921FADECD000B9FCEF /* DummyViewController.swift in Sources */,
 				A676908B1FADEA3100B9FCEF /* HomeNavigationController.swift in Sources */,
 				A67690961FADF52700B9FCEF /* UITableView+Yum.swift in Sources */,
+				277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */,
 				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,
 				A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */,
 				A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */,
