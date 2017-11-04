@@ -9,11 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--홈-->
+        <!--Home Navigation Controller-->
         <scene sceneID="Cay-IP-I0V">
             <objects>
                 <navigationController storyboardIdentifier="HomeNavigationController" id="3z0-Cr-XhD" customClass="HomeNavigationController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="홈" id="vNg-tH-4Os"/>
+                    <tabBarItem key="tabBarItem" title="" image="home-icon" selectedImage="home-icon-selected" id="vNg-tH-4Os">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRV-KQ-KkO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -38,4 +40,8 @@
             <point key="canvasLocation" x="162" y="35"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home-icon" width="22" height="22"/>
+        <image name="home-icon-selected" width="22" height="22"/>
+    </resources>
 </document>

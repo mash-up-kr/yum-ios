@@ -9,11 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--검색-->
+        <!--Search Navigation Controller-->
         <scene sceneID="I3Q-2O-grx">
             <objects>
                 <navigationController storyboardIdentifier="SearchNavigationController" id="bep-92-8SN" customClass="SearchNavigationController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="검색" id="FSh-8i-0lq"/>
+                    <tabBarItem key="tabBarItem" title="" image="search-icon" selectedImage="search-icon-selected" id="FSh-8i-0lq">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r88-6Z-cWH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -38,4 +40,8 @@
             <point key="canvasLocation" x="274" y="89"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="search-icon" width="22" height="22"/>
+        <image name="search-icon-selected" width="22" height="22"/>
+    </resources>
 </document>
