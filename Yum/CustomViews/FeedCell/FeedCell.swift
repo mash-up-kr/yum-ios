@@ -21,6 +21,18 @@ final class FeedCell: UITableViewCell {
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var bodyLabel: UILabel!
     
+    @IBOutlet weak var calorieContainerView: UIView!
+    @IBOutlet weak var calorieButton: UIButton!
+    
+    @IBOutlet weak var tag1ContainerView: UIView!
+    @IBOutlet weak var tag1Button: UIButton!
+    
+    @IBOutlet weak var tag2ContainerView: UIView!
+    @IBOutlet weak var tag2Button: UIButton!
+    
+    @IBOutlet weak var tag3ContainerView: UIView!
+    @IBOutlet weak var tag3Button: UIButton!
+    
     public var forEstimatedHeight: Bool = false
     public var feed: Feed? {
         didSet {
@@ -65,6 +77,18 @@ extension FeedCell {
     private func initViewProperties() {
         userProfileImageView.layer.cornerRadius = 18
         userProfileImageView.layer.masksToBounds = true
+        
+        calorieContainerView.layer.cornerRadius = 15
+        calorieContainerView.layer.masksToBounds = true
+        
+        tag1ContainerView.layer.cornerRadius = 15
+        tag1Button.layer.masksToBounds = true
+        
+        tag2ContainerView.layer.cornerRadius = 15
+        tag2Button.layer.masksToBounds = true
+        
+        tag3ContainerView.layer.cornerRadius = 15
+        tag3Button.layer.masksToBounds = true
     }
     
     private func loadUserProfileImage(userProfileImageUrl: String?) {
