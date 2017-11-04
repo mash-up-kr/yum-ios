@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="767" y="-8"/>
         </scene>
-        <!--Dummy-->
+        <!--Post-->
         <scene sceneID="Ir6-oS-Dbx">
             <objects>
                 <viewController storyboardIdentifier="DummyViewController" id="Hoz-qF-0Id" customClass="DummyViewController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="cN1-EZ-dhW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dummy" id="xCq-t7-AQU"/>
+                    <tabBarItem key="tabBarItem" title="Post" id="xCq-t7-AQU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEf-qq-Jo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
