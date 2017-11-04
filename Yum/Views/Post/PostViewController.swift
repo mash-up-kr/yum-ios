@@ -81,15 +81,30 @@ class PostViewController: UIViewController, UITextViewDelegate {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         keyboardShowing = true
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            self.scrollViewBottom.constant += keyboardSize.height
+        guard let keyboardHeight = keyboardHeight(from: notification) else {
+            return
         }
+        var bottomConstrainConstant = keyboardHeight
+        if #available(iOS 11.0, *) {
+            bottomConstrainConstant -= view.safeAreaInsets.bottom
+        }
+        scrollViewBottom.constant = bottomConstrainConstant
+        let animations = {
+            self.view.setNeedsLayout()
+            self.view.layoutIfNeeded()
+        }
+        let duration = keyboardAnimationDuration(from: notification) ?? 0.25
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: animations, completion: nil)
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         keyboardShowing = false
-        if let _ = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            self.scrollViewBottom.constant = 0
+        scrollViewBottom.constant = 0
+        let animations = {
+            self.view.setNeedsLayout()
+            self.view.layoutIfNeeded()
         }
+        let duration = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? Double) ?? 0.25
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: animations, completion: nil)
     }
 }

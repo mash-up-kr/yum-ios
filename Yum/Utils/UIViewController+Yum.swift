@@ -15,3 +15,15 @@ extension UIViewController {
     }
     
 }
+
+extension UIViewController {
+    
+    func keyboardHeight(from notification: NSNotification) -> CGFloat? {
+        return (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height
+    }
+    
+    func keyboardAnimationDuration(from notification: NSNotification) -> Double? {
+        return notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
+    }
+    
+}

@@ -81,8 +81,8 @@
 		277BABA91FADE72B00A11BA0 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				277BABAA1FADE75900A11BA0 /* PostViewController.swift */,
 				277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */,
+				277BABAA1FADE75900A11BA0 /* PostViewController.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
