@@ -56,9 +56,15 @@ extension HomeViewController {
     }
     
     private func loadFeeds() {
+//        refreshControl?.beginRefreshing()
+//        Feed.getFeeds { feeds in
+//            self.feeds = feeds
+//            self.refreshControl?.endRefreshing()
+//            Async.main(after: 0.5) { UIView.transition(with: self.tableView, duration: 0.3, options: .transitionCrossDissolve, animations: self.tableView.reloadData) }
+//        }
         refreshControl?.beginRefreshing()
-        Feed.getFeeds { feeds in
-            self.feeds = feeds
+        Async.main(after: 1) {
+            self.feeds = Feed.sampleFeeds
             self.refreshControl?.endRefreshing()
             Async.main(after: 0.5) { UIView.transition(with: self.tableView, duration: 0.3, options: .transitionCrossDissolve, animations: self.tableView.reloadData) }
         }

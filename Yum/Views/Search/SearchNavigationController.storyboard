@@ -14,7 +14,7 @@
             <objects>
                 <navigationController storyboardIdentifier="SearchNavigationController" id="bep-92-8SN" customClass="SearchNavigationController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="search-icon" selectedImage="search-icon-selected" id="FSh-8i-0lq">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r88-6Z-cWH">

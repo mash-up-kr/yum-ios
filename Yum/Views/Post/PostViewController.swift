@@ -58,21 +58,28 @@ class PostViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func doneClicked() {
-        guard let content = contentField.text, let calorie = Int(calorieField.text ?? ""), let image = imageView.image, let imageData = UIImagePNGRepresentation(image) else {
+        guard let content = contentField.text, let calorie = Int(calorieField.text ?? "") else { // }, let image = imageView.image, let imageData = UIImagePNGRepresentation(image) else {
             return
         }
         
         var feed = Feed()
+        feed.userName = "기우영"
         feed.body = content
         feed.calorie = calorie
         
-        Feed.postFeed(feed: feed, imageData: imageData) { success in
-            if success {
-                self.dismiss(animated: true, completion: nil)
-            } else {
-                
-            }
-        }
+        feed.userProfileImageUrl = "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400"
+        feed.foodImageUrl = "https://images.unsplash.com/photo-1478369402113-1fd53f17e8b4?auto=format&fit=crop&w=500"
+        
+        Feed.sampleFeeds.insert(feed, at: 0)
+        dismiss(animated: true, completion: nil)
+        
+//        Feed.postFeed(feed: feed, imageData: imageData) { success in
+//            if success {
+//                self.dismiss(animated: true, completion: nil)
+//            } else {
+//
+//            }
+//        }
     }
     
     @IBAction func cancelClicked() {

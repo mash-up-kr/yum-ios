@@ -14,7 +14,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HomeNavigationController" id="3z0-Cr-XhD" customClass="HomeNavigationController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="home-icon" selectedImage="home-icon-selected" id="vNg-tH-4Os">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-5"/>
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRV-KQ-KkO">
