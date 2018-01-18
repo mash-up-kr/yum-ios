@@ -24,7 +24,7 @@ extension TabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         switch viewController {
         case is DummyViewController:
-            present(PostViewController.instantiate(), animated: true, completion: nil)
+            present(PostViewController.instantiate(), animated: false, completion: nil)
             return false
         default:
             return true

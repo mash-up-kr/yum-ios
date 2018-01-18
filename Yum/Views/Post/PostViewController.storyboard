@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZJD-65-5lx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZJD-65-5lx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -208,10 +208,10 @@
                         <viewLayoutGuide key="safeArea" id="iXm-uh-o8R"/>
                     </view>
                     <connections>
-                        <outlet property="calorieField" destination="dHe-be-nPx" id="cqB-yC-IA4"/>
+                        <outlet property="calorieField" destination="dHe-be-nPx" id="DMt-Q6-CvG"/>
                         <outlet property="contentField" destination="HBL-iw-TkL" id="yzs-HW-UpH"/>
                         <outlet property="contentPlaceholder" destination="OgJ-1D-qNz" id="ztY-bW-Oik"/>
-                        <outlet property="imageView" destination="fgj-55-ve5" id="elN-ia-7oc"/>
+                        <outlet property="imageView" destination="fgj-55-ve5" id="xm8-WC-nz7"/>
                         <outlet property="scrollViewBottom" destination="k3r-2r-a4j" id="S2t-du-ajR"/>
                         <outlet property="tagField" destination="uG3-Ns-71m" id="Wql-xo-enx"/>
                         <outlet property="tagPlaceholder" destination="YdS-vp-NFL" id="6Gp-06-Zz4"/>

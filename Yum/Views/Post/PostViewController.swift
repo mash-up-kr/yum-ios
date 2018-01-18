@@ -8,10 +8,11 @@
 
 import UIKit
 import DKImagePickerController
+import Sharaku
 
-class PostViewController: UIViewController, UITextViewDelegate {
+class PostViewController: UIViewController, UITextViewDelegate, SHViewControllerDelegate {
     
-    var image: UIImage!
+    var originImage: UIImage!
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var contentField: UITextView!
@@ -39,22 +40,33 @@ class PostViewController: UIViewController, UITextViewDelegate {
             pickerController.maxSelectableCount = 1
             pickerController.didSelectAssets = { assets in
                 if assets.count == 0 {
-                    self.dismiss(animated: true)
+                    self.dismiss(animated: false)
                 }
                 
                 for img in assets {
                     img.fetchOriginalImageWithCompleteBlock { (image, _) in
-                        self.image = image!
+                        self.originImage = image!
+                        
                         DispatchQueue.main.async {
-                            self.imageView.image = image
+                            let vc = SHViewController(image: self.originImage)
+                            vc.delegate = self
+                            self.present(vc, animated: false)
                         }
                     }
                 }
             }
             
-            present(pickerController, animated: true)
+            present(pickerController, animated: false)
             pickerShowed = true
         }
+    }
+    
+    func shViewControllerImageDidFilter(image: UIImage) {
+        self.imageView.image = image
+    }
+    
+    func shViewControllerDidCancel() {
+        self.imageView.image = self.originImage
     }
     
     @IBAction func doneClicked() {

@@ -8,6 +8,7 @@ PODS:
   - DKImagePickerController/Camera (3.8.1)
   - DKImagePickerController/ImageManager (3.8.1)
   - ManualLayout (1.3.0)
+  - Sharaku (1.0.2)
   - SwiftLint (0.23.1)
 
 DEPENDENCIES:
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - AlamofireImage
   - DKImagePickerController
   - ManualLayout
+  - Sharaku
   - SwiftLint
 
 SPEC CHECKSUMS:
@@ -22,8 +24,9 @@ SPEC CHECKSUMS:
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   DKImagePickerController: 51ad6ee2ba05414bb741db54a72cd7f4fb178e34
   ManualLayout: 68ac8cfa6b5f656f7a9fadec3730208b95986880
+  Sharaku: c18de569fc99f6e936f46ca812b571826cc658a7
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
 
-PODFILE CHECKSUM: 415ebf1e4c46d59054cf947f85e78e03585f3e2c
+PODFILE CHECKSUM: 2633815719215cb4adb6e2b698078b31333c8fb9
 
 COCOAPODS: 1.3.1
