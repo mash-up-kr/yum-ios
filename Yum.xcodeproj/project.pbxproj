@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BABAA1FADE75900A11BA0 /* PostViewController.swift */; };
 		277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */; };
+		27950EC82010C55200472BAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EC72010C55200472BAF /* LoginViewController.swift */; };
+		27950ECA2010C55900472BAF /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EC92010C55900472BAF /* LoginViewController.storyboard */; };
+		27950ED92011E22F00472BAF /* NotiViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950ED82011E22F00472BAF /* NotiViewController.storyboard */; };
+		27950EDB2011E23900472BAF /* NotiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EDA2011E23900472BAF /* NotiViewController.swift */; };
+		27950EDE2011E27800472BAF /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EDD2011E27800472BAF /* MyViewController.swift */; };
+		27950EE02011E28300472BAF /* MyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EDF2011E28300472BAF /* MyViewController.storyboard */; };
+		27950EE22011E36100472BAF /* NotiNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EE12011E36100472BAF /* NotiNavigationController.swift */; };
+		27950EE42011E36C00472BAF /* NotiNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EE32011E36C00472BAF /* NotiNavigationController.storyboard */; };
+		27950EE62011E38800472BAF /* MyNavigtaionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EE52011E38800472BAF /* MyNavigtaionController.swift */; };
+		27950EE82011E39400472BAF /* MyNavigtaionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */; };
 		A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B8D6A1FAE3D6E00B81622 /* Async.swift */; };
 		A65BCBFB1FAE636900474AFA /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BCBFA1FAE636900474AFA /* AlamofireLogger.swift */; };
 		A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690601FADDD7B00B9FCEF /* AppDelegate.swift */; };
@@ -39,6 +49,16 @@
 		12EFC3298D8A124C4EE64F41 /* Pods-Yum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.release.xcconfig"; sourceTree = "<group>"; };
 		277BABAA1FADE75900A11BA0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
+		27950EC72010C55200472BAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		27950EC92010C55900472BAF /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		27950ED82011E22F00472BAF /* NotiViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotiViewController.storyboard; sourceTree = "<group>"; };
+		27950EDA2011E23900472BAF /* NotiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiViewController.swift; sourceTree = "<group>"; };
+		27950EDD2011E27800472BAF /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		27950EDF2011E28300472BAF /* MyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyViewController.storyboard; sourceTree = "<group>"; };
+		27950EE12011E36100472BAF /* NotiNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiNavigationController.swift; sourceTree = "<group>"; };
+		27950EE32011E36C00472BAF /* NotiNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotiNavigationController.storyboard; sourceTree = "<group>"; };
+		27950EE52011E38800472BAF /* MyNavigtaionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigtaionController.swift; sourceTree = "<group>"; };
+		27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyNavigtaionController.storyboard; sourceTree = "<group>"; };
 		724657326AEB08C3FDE78ED8 /* Pods-Yum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.debug.xcconfig"; sourceTree = "<group>"; };
 		872B75EE6CF321E323619E70 /* Pods_Yum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B8D6A1FAE3D6E00B81622 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
@@ -87,6 +107,37 @@
 				277BABAA1FADE75900A11BA0 /* PostViewController.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		27950EC62010C53100472BAF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				27950EC72010C55200472BAF /* LoginViewController.swift */,
+				27950EC92010C55900472BAF /* LoginViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		27950ED72011E1D300472BAF /* Noti */ = {
+			isa = PBXGroup;
+			children = (
+				27950EE32011E36C00472BAF /* NotiNavigationController.storyboard */,
+				27950EE12011E36100472BAF /* NotiNavigationController.swift */,
+				27950ED82011E22F00472BAF /* NotiViewController.storyboard */,
+				27950EDA2011E23900472BAF /* NotiViewController.swift */,
+			);
+			path = Noti;
+			sourceTree = "<group>";
+		};
+		27950EDC2011E26300472BAF /* My */ = {
+			isa = PBXGroup;
+			children = (
+				27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */,
+				27950EE52011E38800472BAF /* MyNavigtaionController.swift */,
+				27950EDF2011E28300472BAF /* MyViewController.storyboard */,
+				27950EDD2011E27800472BAF /* MyViewController.swift */,
+			);
+			path = My;
 			sourceTree = "<group>";
 		};
 		3D7D3DECA3B858860C634AC5 /* Pods */ = {
@@ -150,10 +201,13 @@
 			isa = PBXGroup;
 			children = (
 				A67690691FADDD7B00B9FCEF /* LaunchScreen.storyboard */,
+				27950EC62010C53100472BAF /* Login */,
 				A67690741FADDEE400B9FCEF /* TabBar */,
 				A676907B1FADE80B00B9FCEF /* Home */,
 				A67690801FADE89B00B9FCEF /* Search */,
 				277BABA91FADE72B00A11BA0 /* Post */,
+				27950ED72011E1D300472BAF /* Noti */,
+				27950EDC2011E26300472BAF /* My */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,9 +351,14 @@
 				A676906B1FADDD7B00B9FCEF /* LaunchScreen.storyboard in Resources */,
 				A676908D1FADEA6F00B9FCEF /* SearchNavigationController.storyboard in Resources */,
 				A67690891FADEA0900B9FCEF /* HomeNavigationController.storyboard in Resources */,
+				27950ED92011E22F00472BAF /* NotiViewController.storyboard in Resources */,
 				277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */,
+				27950ECA2010C55900472BAF /* LoginViewController.storyboard in Resources */,
+				27950EE42011E36C00472BAF /* NotiNavigationController.storyboard in Resources */,
 				A67690681FADDD7B00B9FCEF /* Assets.xcassets in Resources */,
 				A67690661FADDD7B00B9FCEF /* TabBarController.storyboard in Resources */,
+				27950EE82011E39400472BAF /* MyNavigtaionController.storyboard in Resources */,
+				27950EE02011E28300472BAF /* MyViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +406,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Yum/Pods-Yum-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/ManualLayout/ManualLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Sharaku/Sharaku.framework",
 			);
@@ -355,7 +419,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ManualLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sharaku.framework",
 			);
@@ -393,12 +462,17 @@
 				A676908F1FADEA9000B9FCEF /* SearchNavigationController.swift in Sources */,
 				A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */,
 				A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */,
+				27950EE22011E36100472BAF /* NotiNavigationController.swift in Sources */,
 				A676909C1FADF6B000B9FCEF /* FeedCell.swift in Sources */,
+				27950EDE2011E27800472BAF /* MyViewController.swift in Sources */,
+				27950EDB2011E23900472BAF /* NotiViewController.swift in Sources */,
+				27950EE62011E38800472BAF /* MyNavigtaionController.swift in Sources */,
 				A67690921FADECD000B9FCEF /* DummyViewController.swift in Sources */,
 				A676908B1FADEA3100B9FCEF /* HomeNavigationController.swift in Sources */,
 				A67690961FADF52700B9FCEF /* UITableView+Yum.swift in Sources */,
 				277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */,
 				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,
+				27950EC82010C55200472BAF /* LoginViewController.swift in Sources */,
 				A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */,
 				A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */,
 				A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */,
@@ -541,6 +615,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C7DN234QX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Yum/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -558,6 +636,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C7DN234QX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Yum/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -2,11 +2,29 @@ PODS:
   - Alamofire (4.5.1)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
   - DKImagePickerController (3.8.1):
     - DKImagePickerController/Camera (= 3.8.1)
     - DKImagePickerController/ImageManager (= 3.8.1)
   - DKImagePickerController/Camera (3.8.1)
   - DKImagePickerController/ImageManager (3.8.1)
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FacebookLogin (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKLoginKit (~> 4.27)
+  - FBSDKCoreKit (4.27.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.27.1):
+    - FBSDKCoreKit
   - ManualLayout (1.3.0)
   - Sharaku (1.0.2)
   - SwiftLint (0.23.1)
@@ -15,6 +33,8 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - DKImagePickerController
+  - FacebookCore
+  - FacebookLogin
   - ManualLayout
   - Sharaku
   - SwiftLint
@@ -22,11 +42,16 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   DKImagePickerController: 51ad6ee2ba05414bb741db54a72cd7f4fb178e34
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
+  FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
+  FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
   ManualLayout: 68ac8cfa6b5f656f7a9fadec3730208b95986880
   Sharaku: c18de569fc99f6e936f46ca812b571826cc658a7
   SwiftLint: 1b670ce79284c76520f84060e87d645078fd32fa
 
-PODFILE CHECKSUM: 2633815719215cb4adb6e2b698078b31333c8fb9
+PODFILE CHECKSUM: f699889bc0e2d986620eec1e35fd05eacccd43df
 
 COCOAPODS: 1.3.1

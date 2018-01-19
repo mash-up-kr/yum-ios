@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lWY-gd-uhk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="c5q-au-tQ1">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lWY-gd-uhk" customClass="LoginViewController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fsg-4J-Wxa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-background" translatesAutoresizingMaskIntoConstraints="NO" id="08E-UP-Ak0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="5Kt-c4-oaH">
+                                <rect key="frame" x="128" y="235.5" width="118" height="136"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfg-82-PWD">
+                                <rect key="frame" x="20.5" y="531" width="334" height="42"/>
+                                <state key="normal" backgroundImage="login-button"/>
+                                <connections>
+                                    <action selector="loginBtnClicked" destination="lWY-gd-uhk" eventType="touchUpInside" id="Dyu-g5-Dh3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MT-2b-2mU">
+                                <rect key="frame" x="74.5" y="603" width="225" height="29"/>
+                                <string key="text">계속 진행하면 Food Feed의 서비스 약관,개인정보 보호정책에 동의한 것으로 간주됩니다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="08E-UP-Ak0" secondAttribute="trailing" id="27u-kh-BFL"/>
+                            <constraint firstAttribute="top" secondItem="08E-UP-Ak0" secondAttribute="top" id="3Tc-u8-j1A"/>
+                            <constraint firstItem="4MT-2b-2mU" firstAttribute="top" secondItem="yfg-82-PWD" secondAttribute="bottom" constant="30" id="40g-Ho-OmH"/>
+                            <constraint firstItem="5Kt-c4-oaH" firstAttribute="centerX" secondItem="Fsg-4J-Wxa" secondAttribute="centerX" id="TIu-BT-txY"/>
+                            <constraint firstItem="08E-UP-Ak0" firstAttribute="leading" secondItem="Fsg-4J-Wxa" secondAttribute="leading" id="Xn4-mf-Gvu"/>
+                            <constraint firstItem="U8j-LS-Mhe" firstAttribute="bottom" secondItem="4MT-2b-2mU" secondAttribute="bottom" constant="35" id="cCX-KR-MZS"/>
+                            <constraint firstAttribute="centerY" secondItem="5Kt-c4-oaH" secondAttribute="centerY" constant="30" id="dtx-Ax-OMX"/>
+                            <constraint firstItem="4MT-2b-2mU" firstAttribute="centerX" secondItem="Fsg-4J-Wxa" secondAttribute="centerX" id="gb1-kn-vDN"/>
+                            <constraint firstItem="yfg-82-PWD" firstAttribute="centerX" secondItem="Fsg-4J-Wxa" secondAttribute="centerX" id="hZO-Ln-UMw"/>
+                            <constraint firstAttribute="bottom" secondItem="08E-UP-Ak0" secondAttribute="bottom" id="wjT-qO-6QK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U8j-LS-Mhe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWF-Ac-enE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login-background" width="622" height="933"/>
+        <image name="login-button" width="334" height="42"/>
+        <image name="login-logo" width="118" height="136"/>
+    </resources>
+</document>

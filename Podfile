@@ -12,6 +12,9 @@ target 'Yum' do
   pod 'DKImagePickerController'
   pod 'ManualLayout'
   pod 'Sharaku'
+  
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
 
   post_install do |installer|
       # Your list of targets here.

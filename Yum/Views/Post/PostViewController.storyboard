@@ -19,25 +19,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ut3-Ik-QQv" userLabel="Status Bar Bg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.84705882349999995" blue="0.62745098040000002" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eab-nC-TXo">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Phb-bx-J5Z"/>
                                 </constraints>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.2470588235" green="0.84705882349999995" blue="0.62745098040000002" alpha="1" colorSpace="deviceRGB"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="새 게시물" id="x97-Ig-OyV">
+                                    <navigationItem title="피드 올리기" id="x97-Ig-OyV">
                                         <barButtonItem key="leftBarButtonItem" title="취소" id="UKI-H4-N9J">
-                                            <color key="tintColor" red="0.2274509804" green="0.68627450980000004" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="cancelClicked" destination="ZJD-65-5lx" id="6pL-LE-I7p"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="공유" id="92m-PB-zHa">
-                                            <color key="tintColor" red="0.22745098039215686" green="0.68627450980392157" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="doneClicked" destination="ZJD-65-5lx" id="Lbh-2W-27T"/>
                                             </connections>
@@ -195,14 +199,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Uu3-cq-uO1" firstAttribute="top" secondItem="Eab-nC-TXo" secondAttribute="bottom" id="0H7-DI-PjX"/>
+                            <constraint firstItem="ut3-Ik-QQv" firstAttribute="top" secondItem="ye1-Wu-jp5" secondAttribute="top" id="8Md-u7-fef"/>
+                            <constraint firstItem="ut3-Ik-QQv" firstAttribute="leading" secondItem="ye1-Wu-jp5" secondAttribute="leading" id="DVh-U5-1hR"/>
                             <constraint firstItem="75x-Ow-Jco" firstAttribute="trailing" secondItem="iXm-uh-o8R" secondAttribute="trailing" id="H0u-Q8-Bf1"/>
                             <constraint firstItem="iXm-uh-o8R" firstAttribute="trailing" secondItem="Uu3-cq-uO1" secondAttribute="trailing" id="Ogg-2Y-qbw"/>
                             <constraint firstItem="75x-Ow-Jco" firstAttribute="top" secondItem="Uu3-cq-uO1" secondAttribute="bottom" id="X28-r5-pNT"/>
                             <constraint firstItem="Eab-nC-TXo" firstAttribute="top" secondItem="iXm-uh-o8R" secondAttribute="top" id="dE6-at-Y8D"/>
                             <constraint firstItem="Eab-nC-TXo" firstAttribute="leading" secondItem="iXm-uh-o8R" secondAttribute="leading" id="dXN-p3-PsZ"/>
+                            <constraint firstItem="Eab-nC-TXo" firstAttribute="top" secondItem="ut3-Ik-QQv" secondAttribute="bottom" id="hfR-YN-Pvo"/>
                             <constraint firstItem="iXm-uh-o8R" firstAttribute="bottom" secondItem="75x-Ow-Jco" secondAttribute="bottom" id="k3r-2r-a4j"/>
                             <constraint firstItem="Uu3-cq-uO1" firstAttribute="leading" secondItem="iXm-uh-o8R" secondAttribute="leading" id="khR-2c-4xz"/>
                             <constraint firstItem="75x-Ow-Jco" firstAttribute="leading" secondItem="iXm-uh-o8R" secondAttribute="leading" id="nNj-Eg-U7A"/>
+                            <constraint firstAttribute="trailing" secondItem="ut3-Ik-QQv" secondAttribute="trailing" id="qjc-aD-0RM"/>
                             <constraint firstItem="Eab-nC-TXo" firstAttribute="trailing" secondItem="iXm-uh-o8R" secondAttribute="trailing" id="s9M-Cn-JXe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iXm-uh-o8R"/>

@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        
+        DispatchQueue.main.async {
+            if let token = FBSDKAccessToken.current() {
+                print("token \(token.userID!)")
+            } else {
+                self.present(LoginViewController.instantiate(), animated: false)
+            }
+        }
     }
-    
 }
 
 // MARK: - TabBarController: UITabBarControllerDelegate

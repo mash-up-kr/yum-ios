@@ -25,5 +25,4 @@ extension UIViewController {
     func keyboardAnimationDuration(from notification: NSNotification) -> Double? {
         return notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
     }
-    
 }

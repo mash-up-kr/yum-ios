@@ -9,5 +9,7 @@
 import UIKit
 
 final class HomeNavigationController: UINavigationController {
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
