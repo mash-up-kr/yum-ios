@@ -12,13 +12,14 @@ target 'Yum' do
   pod 'DKImagePickerController'
   pod 'ManualLayout'
   pod 'Sharaku'
+  pod 'RangeSeekSlider'
   
   pod 'FacebookCore'
   pod 'FacebookLogin'
 
   post_install do |installer|
       # Your list of targets here.
-      myTargets = ['Sharaku']
+      myTargets = ['Sharaku', 'RangeSeekSlider']
       
       installer.pods_project.targets.each do |target|
           if myTargets.include? target.name
