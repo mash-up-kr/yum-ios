@@ -19,6 +19,8 @@
 		27950EE42011E36C00472BAF /* NotiNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EE32011E36C00472BAF /* NotiNavigationController.storyboard */; };
 		27950EE62011E38800472BAF /* MyNavigtaionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EE52011E38800472BAF /* MyNavigtaionController.swift */; };
 		27950EE82011E39400472BAF /* MyNavigtaionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */; };
+		27E811BF202429B600DF8244 /* ServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811BE202429B600DF8244 /* ServerClient.swift */; };
+		27E811C32024330900DF8244 /* DummyDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C22024330900DF8244 /* DummyDatabase.swift */; };
 		A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B8D6A1FAE3D6E00B81622 /* Async.swift */; };
 		A65BCBFB1FAE636900474AFA /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BCBFA1FAE636900474AFA /* AlamofireLogger.swift */; };
 		A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690601FADDD7B00B9FCEF /* AppDelegate.swift */; };
@@ -59,6 +61,8 @@
 		27950EE32011E36C00472BAF /* NotiNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotiNavigationController.storyboard; sourceTree = "<group>"; };
 		27950EE52011E38800472BAF /* MyNavigtaionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigtaionController.swift; sourceTree = "<group>"; };
 		27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyNavigtaionController.storyboard; sourceTree = "<group>"; };
+		27E811BE202429B600DF8244 /* ServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerClient.swift; sourceTree = "<group>"; };
+		27E811C22024330900DF8244 /* DummyDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDatabase.swift; sourceTree = "<group>"; };
 		724657326AEB08C3FDE78ED8 /* Pods-Yum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.debug.xcconfig"; sourceTree = "<group>"; };
 		872B75EE6CF321E323619E70 /* Pods_Yum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B8D6A1FAE3D6E00B81622 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				A676907C1FADE86100B9FCEF /* UIStoryboard+Yum.swift */,
 				A67690951FADF52700B9FCEF /* UITableView+Yum.swift */,
 				A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */,
+				27E811BE202429B600DF8244 /* ServerClient.swift */,
+				27E811C22024330900DF8244 /* DummyDatabase.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 				"${BUILT_PRODUCTS_DIR}/ManualLayout/ManualLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/Sharaku/Sharaku.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -429,6 +436,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ManualLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sharaku.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,8 +472,10 @@
 				A676908F1FADEA9000B9FCEF /* SearchNavigationController.swift in Sources */,
 				A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */,
 				A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */,
+				27E811C32024330900DF8244 /* DummyDatabase.swift in Sources */,
 				27950EE22011E36100472BAF /* NotiNavigationController.swift in Sources */,
 				A676909C1FADF6B000B9FCEF /* FeedCell.swift in Sources */,
+				27E811BF202429B600DF8244 /* ServerClient.swift in Sources */,
 				27950EDE2011E27800472BAF /* MyViewController.swift in Sources */,
 				27950EDB2011E23900472BAF /* NotiViewController.swift in Sources */,
 				27950EE62011E38800472BAF /* MyNavigtaionController.swift in Sources */,

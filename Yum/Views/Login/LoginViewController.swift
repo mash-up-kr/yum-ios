@@ -26,8 +26,19 @@ class LoginViewController: UIViewController {
             if result!.isCancelled {
                 print("cancelled")
             } else {
-                print("token \(result!.token.userID!)")
-                self.dismiss(animated: true)
+                self.login(result!.token.userID)
+            }
+        }
+    }
+    
+    func login(_ facebookId: String) {
+        ServerClient.login(facebookId: facebookId) { success in
+            DispatchQueue.main.async {
+                if success {
+                    self.dismiss(animated: true)
+                } else {
+                    print("login error")
+                }
             }
         }
     }

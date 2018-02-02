@@ -1,3 +1,5 @@
+.idea/
+
 ld/
 *.pbxuser
 !default.pbxuser

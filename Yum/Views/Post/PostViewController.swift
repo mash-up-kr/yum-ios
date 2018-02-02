@@ -74,16 +74,13 @@ class PostViewController: UIViewController, UITextViewDelegate, SHViewController
             return
         }
         
-        var feed = Feed()
-        feed.userName = "기우영"
-        feed.body = content
-        feed.calorie = calorie
+        let imgUrl = "https://images.unsplash.com/photo-1478369402113-1fd53f17e8b4?auto=format&fit=crop&w=500"
         
-        feed.userProfileImageUrl = "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400"
-        feed.foodImageUrl = "https://images.unsplash.com/photo-1478369402113-1fd53f17e8b4?auto=format&fit=crop&w=500"
-        
-        Feed.sampleFeeds.insert(feed, at: 0)
-        dismiss(animated: true, completion: nil)
+        ServerClient.writeFeed(content: content, calorie: calorie, tags: [], imgUrl: imgUrl) { _ in
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
         
 //        Feed.postFeed(feed: feed, imageData: imageData) { success in
 //            if success {

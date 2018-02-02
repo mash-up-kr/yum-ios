@@ -5,6 +5,7 @@ target 'Yum' do
   use_frameworks!
 
   pod 'SwiftLint'
+  pod 'SwiftyJSON'
   
   pod 'Alamofire'
   pod 'AlamofireImage'

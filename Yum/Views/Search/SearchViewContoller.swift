@@ -19,6 +19,7 @@ class SearchViewContoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTap()
         
         calorieSlider.delegate = self
         materialField.delegate = self

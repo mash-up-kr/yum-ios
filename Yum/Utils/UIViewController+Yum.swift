@@ -26,3 +26,13 @@ extension UIViewController {
         return notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
     }
 }
+
+extension UIViewController {
+    func hideKeyboardWhenTap() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard)))
+    }
+    
+    @objc func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+}
