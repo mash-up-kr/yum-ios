@@ -38,7 +38,7 @@ class MyViewController: UIViewController {
             }
         }
         
-        ServerClient.getUserFeedList(userName: self.userName) { feeds in
+        ServerClient.getUserFeedList(page: 0, userName: self.userName) { feeds in
             DispatchQueue.main.async {
                 self.collectionView.initiate(feeds, self)
             }

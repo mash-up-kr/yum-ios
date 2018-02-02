@@ -17,9 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="lgp-Hk-ccz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="66" estimatedRowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Gm-oJ-sVl" customClass="NotiTableView" customModule="Yum" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uz8-va-nmR" firstAttribute="bottom" secondItem="1Gm-oJ-sVl" secondAttribute="bottom" id="2o5-UH-jIr"/>
+                            <constraint firstItem="1Gm-oJ-sVl" firstAttribute="leading" secondItem="uz8-va-nmR" secondAttribute="leading" id="ATg-oZ-zL3"/>
+                            <constraint firstItem="uz8-va-nmR" firstAttribute="trailing" secondItem="1Gm-oJ-sVl" secondAttribute="trailing" id="BN0-jw-6wd"/>
+                            <constraint firstItem="1Gm-oJ-sVl" firstAttribute="top" secondItem="uz8-va-nmR" secondAttribute="top" id="woZ-gl-7Hb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uz8-va-nmR"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="1Gm-oJ-sVl" id="foD-P5-7sX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRy-gE-mID" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

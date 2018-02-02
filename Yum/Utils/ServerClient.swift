@@ -41,7 +41,9 @@ class ServerClient {
 
     static func getFeedList(page: Int,
                             callback: (([Feed]) -> Void)? = nil) {
-        callback?(DummyDatabase.feeds)
+        if page == 0 {
+            callback?(DummyDatabase.feeds)
+        }
     }
     
     static func getFeedDetail(feedId: Int,
@@ -159,8 +161,18 @@ class ServerClient {
         }
     }
     
-    static func getUserFeedList(userName: String,
+    static func getUserFeedList(page: Int,
+                                userName: String,
                                 callback: (([Feed]) -> Void)? = nil) {
-        callback?(DummyDatabase.feeds.filter({ $0.userName == userName }))
+        if page == 0 {
+            callback?(DummyDatabase.feeds.filter({ $0.userName == userName }))
+        }
+    }
+    
+    static func getNotiList(page: Int,
+                            callback: (([Noti]) -> Void)? = nil) {
+        if page == 0 {
+            callback?(DummyDatabase.notis)
+        }
     }
 }

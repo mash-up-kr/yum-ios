@@ -9,5 +9,11 @@
 import UIKit
 
 class NotiViewController: UIViewController {
+    @IBOutlet weak var tableView: NotiTableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.initiate()
+    }
 }
