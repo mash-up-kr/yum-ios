@@ -26,6 +26,8 @@
 		27E811C920244EFF00DF8244 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C820244EFF00DF8244 /* MyCollectionView.swift */; };
 		27E811CB20244F3F00DF8244 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811CA20244F3F00DF8244 /* MyCollectionViewCell.swift */; };
 		27E811CD20244F5800DF8244 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E811CC20244F5800DF8244 /* MyCollectionViewCell.xib */; };
+		27E811D020245B5B00DF8244 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811CF20245B5B00DF8244 /* FeedViewController.swift */; };
+		27E811D220245B6600DF8244 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E811D120245B6600DF8244 /* FeedViewController.storyboard */; };
 		A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B8D6A1FAE3D6E00B81622 /* Async.swift */; };
 		A65BCBFB1FAE636900474AFA /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BCBFA1FAE636900474AFA /* AlamofireLogger.swift */; };
 		A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690601FADDD7B00B9FCEF /* AppDelegate.swift */; };
@@ -73,6 +75,8 @@
 		27E811C820244EFF00DF8244 /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
 		27E811CA20244F3F00DF8244 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		27E811CC20244F5800DF8244 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		27E811CF20245B5B00DF8244 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		27E811D120245B6600DF8244 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		724657326AEB08C3FDE78ED8 /* Pods-Yum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.debug.xcconfig"; sourceTree = "<group>"; };
 		872B75EE6CF321E323619E70 /* Pods_Yum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B8D6A1FAE3D6E00B81622 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
@@ -157,6 +161,15 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		27E811CE20245B4900DF8244 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				27E811CF20245B5B00DF8244 /* FeedViewController.swift */,
+				27E811D120245B6600DF8244 /* FeedViewController.storyboard */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
 		3D7D3DECA3B858860C634AC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +234,7 @@
 				27950EC62010C53100472BAF /* Login */,
 				A67690741FADDEE400B9FCEF /* TabBar */,
 				A676907B1FADE80B00B9FCEF /* Home */,
+				27E811CE20245B4900DF8244 /* Feed */,
 				A67690801FADE89B00B9FCEF /* Search */,
 				277BABA91FADE72B00A11BA0 /* Post */,
 				27950ED72011E1D300472BAF /* Noti */,
@@ -373,6 +387,7 @@
 				A676908D1FADEA6F00B9FCEF /* SearchNavigationController.storyboard in Resources */,
 				27E811CD20244F5800DF8244 /* MyCollectionViewCell.xib in Resources */,
 				A67690891FADEA0900B9FCEF /* HomeNavigationController.storyboard in Resources */,
+				27E811D220245B6600DF8244 /* FeedViewController.storyboard in Resources */,
 				27950ED92011E22F00472BAF /* NotiViewController.storyboard in Resources */,
 				277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */,
 				27950ECA2010C55900472BAF /* LoginViewController.storyboard in Resources */,
@@ -487,6 +502,7 @@
 				A6E3C0911FAE18A200F60DB1 /* Feed.swift in Sources */,
 				27E811C720244A3600DF8244 /* User.swift in Sources */,
 				A67690861FADE94300B9FCEF /* SearchViewContoller.swift in Sources */,
+				27E811D020245B5B00DF8244 /* FeedViewController.swift in Sources */,
 				A676908F1FADEA9000B9FCEF /* SearchNavigationController.swift in Sources */,
 				A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */,
 				A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */,

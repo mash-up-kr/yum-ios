@@ -21,6 +21,7 @@ class MyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = userName
         
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileImage.layer.masksToBounds = true
@@ -39,7 +40,7 @@ class MyViewController: UIViewController {
         
         ServerClient.getUserFeedList(userName: self.userName) { feeds in
             DispatchQueue.main.async {
-                self.collectionView.initiate(feeds)
+                self.collectionView.initiate(feeds, self)
             }
         }
     }

@@ -11,8 +11,10 @@ import UIKit
 class MyCollectionView: UICollectionView {
     let CELL_NAME = "MyCollectionViewCell"
     var feeds: [Feed]!
+    weak var vc: MyViewController!
     
-    func initiate(_ feeds: [Feed]) {
+    func initiate(_ feeds: [Feed], _ vc: MyViewController) {
+        self.vc = vc
         self.feeds = feeds
         self.register(UINib(nibName: CELL_NAME, bundle: nil), forCellWithReuseIdentifier: CELL_NAME)
         self.delegate = self
@@ -22,11 +24,13 @@ class MyCollectionView: UICollectionView {
 
 extension MyCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("")
-//        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
-//        if(indexPath.row >= self.items.count) { return }
-//
-//        delegate?.infiniteTableView?(self, didSelectItemAt: indexPath, item: items[indexPath.row], cell: cell)
+        let item = feeds[indexPath.row]
+        
+        let vc = FeedViewController.instantiate()
+        if let tab = self.vc.navigationController?.tabBarController {
+            vc.feed = item
+            tab.present(vc, animated: true, completion: nil)
+        }
     }
     
     //cell size
