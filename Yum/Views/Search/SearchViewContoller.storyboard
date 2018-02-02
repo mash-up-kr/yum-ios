@@ -155,6 +155,9 @@
                                 <state key="normal" title="이 옵션으로 검색하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchBtnClicked" destination="nIk-de-D8m" eventType="touchUpInside" id="h9e-SK-009"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

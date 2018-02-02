@@ -32,6 +32,9 @@
 		27E811DA20246F9F00DF8244 /* NotiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811D920246F9F00DF8244 /* NotiTableView.swift */; };
 		27E811DC20246FAA00DF8244 /* NotiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811DB20246FAA00DF8244 /* NotiTableViewCell.swift */; };
 		27E811DE20246FB300DF8244 /* NotiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E811DD20246FB300DF8244 /* NotiTableViewCell.xib */; };
+		27E811E02024784900DF8244 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811DF2024784900DF8244 /* SearchResultViewController.swift */; };
+		27E811E22024785300DF8244 /* SearchResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E811E12024785300DF8244 /* SearchResultViewController.storyboard */; };
+		27E811E420247A8800DF8244 /* SearchResultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811E320247A8800DF8244 /* SearchResultNavigationController.swift */; };
 		A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B8D6A1FAE3D6E00B81622 /* Async.swift */; };
 		A65BCBFB1FAE636900474AFA /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BCBFA1FAE636900474AFA /* AlamofireLogger.swift */; };
 		A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690601FADDD7B00B9FCEF /* AppDelegate.swift */; };
@@ -85,6 +88,9 @@
 		27E811D920246F9F00DF8244 /* NotiTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiTableView.swift; sourceTree = "<group>"; };
 		27E811DB20246FAA00DF8244 /* NotiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiTableViewCell.swift; sourceTree = "<group>"; };
 		27E811DD20246FB300DF8244 /* NotiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotiTableViewCell.xib; sourceTree = "<group>"; };
+		27E811DF2024784900DF8244 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		27E811E12024785300DF8244 /* SearchResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResultViewController.storyboard; sourceTree = "<group>"; };
+		27E811E320247A8800DF8244 /* SearchResultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultNavigationController.swift; sourceTree = "<group>"; };
 		724657326AEB08C3FDE78ED8 /* Pods-Yum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.debug.xcconfig"; sourceTree = "<group>"; };
 		872B75EE6CF321E323619E70 /* Pods_Yum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B8D6A1FAE3D6E00B81622 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
@@ -298,6 +304,9 @@
 				A676908E1FADEA9000B9FCEF /* SearchNavigationController.swift */,
 				A67690811FADE8AD00B9FCEF /* SearchViewContoller.storyboard */,
 				A67690851FADE94300B9FCEF /* SearchViewContoller.swift */,
+				27E811DF2024784900DF8244 /* SearchResultViewController.swift */,
+				27E811E12024785300DF8244 /* SearchResultViewController.storyboard */,
+				27E811E320247A8800DF8244 /* SearchResultNavigationController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -398,6 +407,7 @@
 				A676906B1FADDD7B00B9FCEF /* LaunchScreen.storyboard in Resources */,
 				A676908D1FADEA6F00B9FCEF /* SearchNavigationController.storyboard in Resources */,
 				27E811DE20246FB300DF8244 /* NotiTableViewCell.xib in Resources */,
+				27E811E22024785300DF8244 /* SearchResultViewController.storyboard in Resources */,
 				27E811CD20244F5800DF8244 /* MyCollectionViewCell.xib in Resources */,
 				A67690891FADEA0900B9FCEF /* HomeNavigationController.storyboard in Resources */,
 				27E811D220245B6600DF8244 /* FeedViewController.storyboard in Resources */,
@@ -522,6 +532,7 @@
 				A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */,
 				A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */,
 				27E811DA20246F9F00DF8244 /* NotiTableView.swift in Sources */,
+				27E811E420247A8800DF8244 /* SearchResultNavigationController.swift in Sources */,
 				27E811C32024330900DF8244 /* DummyDatabase.swift in Sources */,
 				27950EE22011E36100472BAF /* NotiNavigationController.swift in Sources */,
 				A676909C1FADF6B000B9FCEF /* FeedCell.swift in Sources */,
@@ -539,6 +550,7 @@
 				27E811C920244EFF00DF8244 /* MyCollectionView.swift in Sources */,
 				A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */,
 				A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */,
+				27E811E02024784900DF8244 /* SearchResultViewController.swift in Sources */,
 				A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,6 +25,34 @@ class SearchViewContoller: UIViewController {
         materialField.delegate = self
         userField.delegate = self
     }
+    
+    @IBAction func searchBtnClicked() {
+        let storyboard = UIStoryboard(name: "SearchResultViewController", bundle: nil)
+        
+        guard let nav = storyboard.instantiateViewController(withIdentifier: "SearchResultNavigationController") as? SearchResultNavigationController,
+            let vc = nav.topViewController as? SearchResultViewController else {
+                return
+        }
+        
+        vc.startCalorie = Int(calorieSlider.minValue)
+        vc.endCalorie = Int(calorieSlider.maxValue)
+        
+        if let material = materialField.text {
+            if material != "" {
+                vc.tag = material
+            }
+        }
+        
+        if let userName = userField.text {
+            if userName != "" {
+                vc.userName = userName
+            }
+        }
+        
+        if let tab = self.navigationController?.tabBarController {
+            tab.present(nav, animated: true, completion: nil)
+        }
+    }
 }
 
 extension SearchViewContoller: RangeSeekSliderDelegate {
