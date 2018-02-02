@@ -34,9 +34,14 @@ extension TabBarController: UITabBarControllerDelegate {
         case is DummyViewController:
             present(PostViewController.instantiate(), animated: false, completion: nil)
             return false
+        case is MyNavigtaionController:
+            if let nav = viewController as? MyNavigtaionController,
+                let vc = nav.topViewController as? MyViewController {
+                vc.userName = ServerClient.userName
+            }
+            return true
         default:
             return true
         }
     }
-    
 }

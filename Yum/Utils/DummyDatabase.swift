@@ -245,4 +245,63 @@ class DummyDatabase {
                 tags: ["아보카도"]
         )
     ]
+    
+    static var users: [User] = [
+        User(
+            userProfile: "https://images.unsplash.com/photo-1504884790557-80daa3a9e621?auto=format&fit=crop&w=400",
+            userName: "박종훈",
+            feedNum: 2,
+            followerNum: 3,
+            followingNum: 4,
+            userMsg: "후후"
+        ),
+        User(
+            userProfile: "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400",
+            userName: "이현승",
+            feedNum: 2,
+            followerNum: 3,
+            followingNum: 4,
+            userMsg: "하하"
+        ),
+        User(
+            userProfile: "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400",
+            userName: "기우영",
+            feedNum: 2,
+            followerNum: 3,
+            followingNum: 4,
+            userMsg: "히히"
+        ),
+        User(
+            userProfile: "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400",
+            userName: "유병한",
+            feedNum: 2,
+            followerNum: 3,
+            followingNum: 4,
+            userMsg: "호호"
+        ),
+        User(
+            userProfile: "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400",
+            userName: "고은이",
+            feedNum: 2,
+            followerNum: 3,
+            followingNum: 4,
+            userMsg: "허허"
+        ),
+        User(
+            userProfile: "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400",
+            userName: "김동현",
+            feedNum: 2,
+            followerNum: 3,
+            followingNum: 4,
+            userMsg: "헤헤"
+        ),
+        User(
+            userProfile: "https://images.unsplash.com/photo-1504455583697-3a9b04be6397?auto=format&fit=crop&w=400",
+            userName: "김현섭",
+            feedNum: 2,
+            followerNum: 3,
+            followingNum: 4,
+            userMsg: "흐흐"
+        )
+    ]
 }

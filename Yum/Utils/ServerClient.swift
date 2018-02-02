@@ -10,17 +10,17 @@ import Foundation
 
 class ServerClient {
     static var userToken: String?
-    static var userProfile = "https://images.unsplash.com/photo-1504884790557-80daa3a9e621?auto=format&fit=crop&w=400"
-    static var userName = "박종훈"
-    static var feedNum = 2
-    static var followerNum = 3
-    static var followingNum = 4
-    static var userMsg = "Healthy food is my life ♥\nBE MY SELF with healthy life"
+    static var userName = "김현섭"
+    static var user: User!
     
     static func login(facebookId: String,
                       callback: ((Bool) -> Void)? = nil) {
         ServerClient.userToken = facebookId
         callback?(true)
+        
+        ServerClient.getUserDetail(userName: userName) { user in
+            ServerClient.user = user
+        }
     }
 
     static func register(facebookId: String,
@@ -28,6 +28,10 @@ class ServerClient {
                          callback: ((Bool) -> Void)? = nil) {
         ServerClient.userToken = facebookId
         callback?(true)
+        
+        ServerClient.getUserDetail(userName: userName) { user in
+            ServerClient.user = user
+        }
     }
 
     static func userNameCheck(userName: String,
@@ -54,7 +58,7 @@ class ServerClient {
                           callback: ((Feed) -> Void)? = nil) {
         let feed = Feed(
             feedId: Int(Date().timeIntervalSince1970), //current millisecond
-            userProfileImageUrl: ServerClient.userProfile,
+            userProfileImageUrl: ServerClient.user.userProfile,
             userName: ServerClient.userName,
             foodImageUrl: imgUrl,
             body: content,
@@ -74,7 +78,7 @@ class ServerClient {
                            callback: ((Feed) -> Void)? = nil) {
         let feed = Feed(
             feedId: feedId,
-            userProfileImageUrl: ServerClient.userProfile,
+            userProfileImageUrl: ServerClient.user.userProfile,
             userName: ServerClient.userName,
             foodImageUrl: imgUrl,
             body: content,
@@ -146,6 +150,13 @@ class ServerClient {
             
             return matchCalorie && matchTag && matchUserName
         }))
+    }
+    
+    static func getUserDetail(userName: String,
+                              callback: ((User) -> Void)? = nil) {
+        if let user = DummyDatabase.users.filter({ $0.userName == userName }).first {
+            callback?(user)
+        }
     }
     
     static func getUserFeedList(userName: String,
