@@ -18,6 +18,7 @@ final class TabBarController: UITabBarController {
         DispatchQueue.main.async {
             if let token = FBSDKAccessToken.current() {
                 print("token \(token.userID!)")
+                ServerClient.login(facebookId: token.userID)
             } else {
                 self.present(LoginViewController.instantiate(), animated: false)
             }
