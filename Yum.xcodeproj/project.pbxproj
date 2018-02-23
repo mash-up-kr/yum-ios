@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272E7E93204044E100EB8DEC /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E7E92204044E100EB8DEC /* LoginManager.swift */; };
 		277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BABAA1FADE75900A11BA0 /* PostViewController.swift */; };
 		277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */; };
 		27950EC82010C55200472BAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EC72010C55200472BAF /* LoginViewController.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		12EFC3298D8A124C4EE64F41 /* Pods-Yum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.release.xcconfig"; sourceTree = "<group>"; };
+		272E7E92204044E100EB8DEC /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		277BABAA1FADE75900A11BA0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
 		27950EC72010C55200472BAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */,
 				27E811BE202429B600DF8244 /* ServerClient.swift */,
 				27E811C42024475A00DF8244 /* UIImageView+Yum.swift */,
+				272E7E92204044E100EB8DEC /* LoginManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				27950EC82010C55200472BAF /* LoginViewController.swift in Sources */,
 				27E811C920244EFF00DF8244 /* MyCollectionView.swift in Sources */,
 				A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */,
+				272E7E93204044E100EB8DEC /* LoginManager.swift in Sources */,
 				A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */,
 				27E811E02024784900DF8244 /* SearchResultViewController.swift in Sources */,
 				A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */,

@@ -8,16 +8,19 @@
 
 import UIKit
 import FBSDKLoginKit
+import SwiftyJSON
 
 final class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
-        
+
         DispatchQueue.main.async {
-            if let token = FBSDKAccessToken.current() {
-                ServerClient.login(facebookId: token.userID, name: "김현섭")
+            if LoginManager.isLogin {
+                LoginManager.login(self) { userID, name in
+                    ServerClient.login(facebookId: userID, name: name)
+                }
             } else {
                 self.present(LoginViewController.instantiate(), animated: false)
             }
