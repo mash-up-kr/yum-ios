@@ -14,6 +14,7 @@ target 'Yum' do
   pod 'ManualLayout'
   pod 'Sharaku'
   pod 'RangeSeekSlider'
+  pod 'Toaster'
   
   pod 'FacebookCore'
   pod 'FacebookLogin'

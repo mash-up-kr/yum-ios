@@ -21,16 +21,13 @@ struct Feed: Codable {
     var isLike: Bool = false
     
     init(json: JSON) {
-        self.feedId = json["feed_id"].intValue
-        self.userProfileImageUrl = json["user_profile"].stringValue
-        self.userName = json["user_name"].stringValue
-        self.foodImageUrl = json["img_url"].stringValue
+        self.feedId = json["feedId"].intValue
+        self.userProfileImageUrl = json["profileImg"].stringValue
+        self.userName = json["nickname"].stringValue
+        self.foodImageUrl = json["imgUrl"].stringValue
         self.body = json["content"].stringValue
         self.calorie = json["calorie"].intValue
-        
-        for inner in json["tags"].arrayValue {
-            self.tags.append(inner.stringValue)
-        }
+        self.tags.append(contentsOf: json["hashtags"].stringValue.components(separatedBy: ","))
     }
     
     init(feedId: Int,

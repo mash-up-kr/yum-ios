@@ -63,7 +63,7 @@ extension HomeViewController {
 //            Async.main(after: 0.5) { UIView.transition(with: self.tableView, duration: 0.3, options: .transitionCrossDissolve, animations: self.tableView.reloadData) }
 //        }
         refreshControl?.beginRefreshing()
-        ServerClient.getFeedList(page: 0) { feeds in
+        ServerClient.getFeedList { feeds in
             Async.main(after: 1) {
                 self.feeds = feeds
                 self.refreshControl?.endRefreshing()

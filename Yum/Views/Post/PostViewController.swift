@@ -74,9 +74,7 @@ class PostViewController: UIViewController, UITextViewDelegate, SHViewController
             return
         }
         
-        let imgUrl = "https://images.unsplash.com/photo-1478369402113-1fd53f17e8b4?auto=format&fit=crop&w=500"
-        
-        ServerClient.writeFeed(content: content, calorie: calorie, tags: [], imgUrl: imgUrl) { _ in
+        ServerClient.writeFeed(content: content, calorie: calorie, tags: [], image: self.imageView.image!) { _ in
             DispatchQueue.main.async {
                 self.dismiss(animated: true, completion: nil)
             }

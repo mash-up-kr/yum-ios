@@ -27,6 +27,10 @@ class MyViewController: UIViewController {
         profileImage.layer.masksToBounds = true
         
         ServerClient.getUserDetail(userName: self.userName) { user in
+            guard let user = user else {
+                return
+            }
+            
             self.user = user
             
             DispatchQueue.main.async {

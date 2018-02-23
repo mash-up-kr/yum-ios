@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import Toaster
 
 class LoginViewController: UIViewController {
     
@@ -19,12 +20,12 @@ class LoginViewController: UIViewController {
         let loginManager = FBSDKLoginManager()
         loginManager.logIn(withReadPermissions: [], from: self) { (result, error) -> Void in
             if let error = error {
-                print("error : \(error)")
+                Toast(text: "error : \(error)").show()
                 return
             }
             
             if result!.isCancelled {
-                print("cancelled")
+                Toast(text: "cancelled").show()
             } else {
                 self.login(result!.token.userID)
             }
@@ -32,12 +33,12 @@ class LoginViewController: UIViewController {
     }
     
     func login(_ facebookId: String) {
-        ServerClient.login(facebookId: facebookId) { success in
+        ServerClient.login(facebookId: facebookId, name: "김현섭") { success in
             DispatchQueue.main.async {
                 if success {
                     self.dismiss(animated: true)
                 } else {
-                    print("login error")
+                    Toast(text: "login error").show()
                 }
             }
         }

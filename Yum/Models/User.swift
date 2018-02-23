@@ -10,6 +10,7 @@ import Foundation
 import SwiftyJSON
 
 struct User {
+    var id = 1
     var userProfile = "https://images.unsplash.com/photo-1504884790557-80daa3a9e621?auto=format&fit=crop&w=400"
     var userName = "박종훈"
     var feedNum = 2
@@ -18,12 +19,13 @@ struct User {
     var userMsg = "Healthy food is my life ♥\nBE MY SELF with healthy life"
     
     init(json: JSON) {
-        self.userProfile = json["user_profile"].stringValue
-        self.userName = json["user_name"].stringValue
-        self.feedNum = json["feed_num"].intValue
-        self.followerNum = json["follower_num"].intValue
-        self.followingNum = json["following_num"].intValue
-        self.userMsg = json["user_msg"].stringValue
+        self.userProfile = json["profileImg"].stringValue
+        self.userName = json["nickname"].stringValue
+        self.feedNum = json["feedNum"].intValue
+        self.followerNum = json["followerNum"].intValue
+        self.followingNum = json["followingNum"].intValue
+        self.userMsg = json["profileMessage"].stringValue
+        self.id = json["id"].intValue
     }
     
     init(userProfile: String,

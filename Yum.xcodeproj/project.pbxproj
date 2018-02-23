@@ -20,7 +20,6 @@
 		27950EE62011E38800472BAF /* MyNavigtaionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EE52011E38800472BAF /* MyNavigtaionController.swift */; };
 		27950EE82011E39400472BAF /* MyNavigtaionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */; };
 		27E811BF202429B600DF8244 /* ServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811BE202429B600DF8244 /* ServerClient.swift */; };
-		27E811C32024330900DF8244 /* DummyDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C22024330900DF8244 /* DummyDatabase.swift */; };
 		27E811C52024475A00DF8244 /* UIImageView+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C42024475A00DF8244 /* UIImageView+Yum.swift */; };
 		27E811C720244A3600DF8244 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C620244A3600DF8244 /* User.swift */; };
 		27E811C920244EFF00DF8244 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C820244EFF00DF8244 /* MyCollectionView.swift */; };
@@ -76,7 +75,6 @@
 		27950EE52011E38800472BAF /* MyNavigtaionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigtaionController.swift; sourceTree = "<group>"; };
 		27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyNavigtaionController.storyboard; sourceTree = "<group>"; };
 		27E811BE202429B600DF8244 /* ServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerClient.swift; sourceTree = "<group>"; };
-		27E811C22024330900DF8244 /* DummyDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDatabase.swift; sourceTree = "<group>"; };
 		27E811C42024475A00DF8244 /* UIImageView+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Yum.swift"; sourceTree = "<group>"; };
 		27E811C620244A3600DF8244 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27E811C820244EFF00DF8244 /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
@@ -280,7 +278,6 @@
 				A67690951FADF52700B9FCEF /* UITableView+Yum.swift */,
 				A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */,
 				27E811BE202429B600DF8244 /* ServerClient.swift */,
-				27E811C22024330900DF8244 /* DummyDatabase.swift */,
 				27E811C42024475A00DF8244 /* UIImageView+Yum.swift */,
 			);
 			path = Utils;
@@ -476,6 +473,7 @@
 				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/Sharaku/Sharaku.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -491,6 +489,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sharaku.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -533,7 +532,6 @@
 				A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */,
 				27E811DA20246F9F00DF8244 /* NotiTableView.swift in Sources */,
 				27E811E420247A8800DF8244 /* SearchResultNavigationController.swift in Sources */,
-				27E811C32024330900DF8244 /* DummyDatabase.swift in Sources */,
 				27950EE22011E36100472BAF /* NotiNavigationController.swift in Sources */,
 				A676909C1FADF6B000B9FCEF /* FeedCell.swift in Sources */,
 				27E811C52024475A00DF8244 /* UIImageView+Yum.swift in Sources */,

@@ -34,8 +34,8 @@ class SearchViewContoller: UIViewController {
                 return
         }
         
-        vc.startCalorie = Int(calorieSlider.minValue)
-        vc.endCalorie = Int(calorieSlider.maxValue)
+        vc.startCalorie = Int(calorieSlider.selectedMinValue)
+        vc.endCalorie = Int(calorieSlider.selectedMaxValue)
         
         if let material = materialField.text {
             if material != "" {
