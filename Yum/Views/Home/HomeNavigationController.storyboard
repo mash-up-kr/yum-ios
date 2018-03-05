@@ -13,7 +13,7 @@
         <scene sceneID="Cay-IP-I0V">
             <objects>
                 <navigationController storyboardIdentifier="HomeNavigationController" id="3z0-Cr-XhD" customClass="HomeNavigationController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home-icon" selectedImage="home-icon-selected" id="vNg-tH-4Os">
+                    <tabBarItem key="tabBarItem" title="" image="tab-home-off" selectedImage="tab-home-on" id="vNg-tH-4Os">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -42,7 +42,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home-icon" width="22" height="22"/>
-        <image name="home-icon-selected" width="22" height="22"/>
+        <image name="tab-home-off" width="22" height="24"/>
+        <image name="tab-home-on" width="22" height="24"/>
     </resources>
 </document>

@@ -30,7 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="cN1-EZ-dhW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="post-icon" selectedImage="post-icon" id="xCq-t7-AQU">
+                    <tabBarItem key="tabBarItem" title="" image="tab-add-off" selectedImage="tab-add-on" id="xCq-t7-AQU">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                 </viewController>
@@ -93,6 +93,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="post-icon" width="26" height="26"/>
+        <image name="tab-add-off" width="25" height="25"/>
+        <image name="tab-add-on" width="25" height="25"/>
     </resources>
 </document>
