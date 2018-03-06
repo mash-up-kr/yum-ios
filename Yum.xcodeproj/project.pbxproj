@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		272E7E93204044E100EB8DEC /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E7E92204044E100EB8DEC /* LoginManager.swift */; };
+		2742C4BE204E1053006D7529 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2742C4BD204E1053006D7529 /* FeedCell.xib */; };
+		2742C4C0204E1064006D7529 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742C4BF204E1064006D7529 /* FeedCell.swift */; };
+		2742C4C2204E170E006D7529 /* FeedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742C4C1204E170E006D7529 /* FeedTableView.swift */; };
+		2742C4C7204E1BA0006D7529 /* NanumSquareOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2742C4C3204E1B9F006D7529 /* NanumSquareOTFExtraBold.otf */; };
+		2742C4C8204E1BA0006D7529 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2742C4C4204E1BA0006D7529 /* NanumSquareOTFBold.otf */; };
+		2742C4C9204E1BA0006D7529 /* NanumSquareOTFLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2742C4C5204E1BA0006D7529 /* NanumSquareOTFLight.otf */; };
+		2742C4CA204E1BA0006D7529 /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2742C4C6204E1BA0006D7529 /* NanumSquareOTFRegular.otf */; };
+		277A0CD6204CFD0D00F23A36 /* GraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A0CD5204CFD0D00F23A36 /* GraphicView.swift */; };
+		277A0CD8204CFD7300F23A36 /* TagListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277A0CD7204CFD7300F23A36 /* TagListView.xib */; };
+		277A0CDA204D00A700F23A36 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A0CD9204D00A700F23A36 /* TagListView.swift */; };
+		277A0CDC204D02BF00F23A36 /* Extensions+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A0CDB204D02BF00F23A36 /* Extensions+Yum.swift */; };
 		277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BABAA1FADE75900A11BA0 /* PostViewController.swift */; };
 		277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */; };
 		27950EC82010C55200472BAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EC72010C55200472BAF /* LoginViewController.swift */; };
@@ -55,8 +66,6 @@
 		A67690921FADECD000B9FCEF /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690911FADECD000B9FCEF /* DummyViewController.swift */; };
 		A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */; };
 		A67690961FADF52700B9FCEF /* UITableView+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690951FADF52700B9FCEF /* UITableView+Yum.swift */; };
-		A676909A1FADF6A700B9FCEF /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A67690991FADF6A700B9FCEF /* FeedCell.xib */; };
-		A676909C1FADF6B000B9FCEF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676909B1FADF6B000B9FCEF /* FeedCell.swift */; };
 		A6E3C0911FAE18A200F60DB1 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3C0901FAE18A200F60DB1 /* Feed.swift */; };
 		B09ABBC47978499AC017F5BA /* Pods_Yum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872B75EE6CF321E323619E70 /* Pods_Yum.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +73,17 @@
 /* Begin PBXFileReference section */
 		12EFC3298D8A124C4EE64F41 /* Pods-Yum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.release.xcconfig"; sourceTree = "<group>"; };
 		272E7E92204044E100EB8DEC /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		2742C4BD204E1053006D7529 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		2742C4BF204E1064006D7529 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		2742C4C1204E170E006D7529 /* FeedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableView.swift; sourceTree = "<group>"; };
+		2742C4C3204E1B9F006D7529 /* NanumSquareOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFExtraBold.otf; sourceTree = "<group>"; };
+		2742C4C4204E1BA0006D7529 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
+		2742C4C5204E1BA0006D7529 /* NanumSquareOTFLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFLight.otf; sourceTree = "<group>"; };
+		2742C4C6204E1BA0006D7529 /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
+		277A0CD5204CFD0D00F23A36 /* GraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicView.swift; sourceTree = "<group>"; };
+		277A0CD7204CFD7300F23A36 /* TagListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagListView.xib; sourceTree = "<group>"; };
+		277A0CD9204D00A700F23A36 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		277A0CDB204D02BF00F23A36 /* Extensions+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Yum.swift"; sourceTree = "<group>"; };
 		277BABAA1FADE75900A11BA0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
 		27950EC72010C55200472BAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -115,8 +135,6 @@
 		A67690911FADECD000B9FCEF /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Yum.swift"; sourceTree = "<group>"; };
 		A67690951FADF52700B9FCEF /* UITableView+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Yum.swift"; sourceTree = "<group>"; };
-		A67690991FADF6A700B9FCEF /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
-		A676909B1FADF6B000B9FCEF /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		A6E3C0901FAE18A200F60DB1 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +257,10 @@
 		A67690721FADDEB700B9FCEF /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				2742C4C4204E1BA0006D7529 /* NanumSquareOTFBold.otf */,
+				2742C4C3204E1B9F006D7529 /* NanumSquareOTFExtraBold.otf */,
+				2742C4C5204E1BA0006D7529 /* NanumSquareOTFLight.otf */,
+				2742C4C6204E1BA0006D7529 /* NanumSquareOTFRegular.otf */,
 				A676906C1FADDD7B00B9FCEF /* Info.plist */,
 			);
 			path = Supports;
@@ -282,6 +304,7 @@
 				27E811BE202429B600DF8244 /* ServerClient.swift */,
 				27E811C42024475A00DF8244 /* UIImageView+Yum.swift */,
 				272E7E92204044E100EB8DEC /* LoginManager.swift */,
+				277A0CDB204D02BF00F23A36 /* Extensions+Yum.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -315,6 +338,9 @@
 			isa = PBXGroup;
 			children = (
 				A67690981FADF68C00B9FCEF /* FeedCell */,
+				277A0CD5204CFD0D00F23A36 /* GraphicView.swift */,
+				277A0CD7204CFD7300F23A36 /* TagListView.xib */,
+				277A0CD9204D00A700F23A36 /* TagListView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -322,8 +348,9 @@
 		A67690981FADF68C00B9FCEF /* FeedCell */ = {
 			isa = PBXGroup;
 			children = (
-				A67690991FADF6A700B9FCEF /* FeedCell.xib */,
-				A676909B1FADF6B000B9FCEF /* FeedCell.swift */,
+				2742C4BD204E1053006D7529 /* FeedCell.xib */,
+				2742C4BF204E1064006D7529 /* FeedCell.swift */,
+				2742C4C1204E170E006D7529 /* FeedTableView.swift */,
 			);
 			path = FeedCell;
 			sourceTree = "<group>";
@@ -401,10 +428,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2742C4C9204E1BA0006D7529 /* NanumSquareOTFLight.otf in Resources */,
 				A67690821FADE8AD00B9FCEF /* SearchViewContoller.storyboard in Resources */,
-				A676909A1FADF6A700B9FCEF /* FeedCell.xib in Resources */,
+				2742C4CA204E1BA0006D7529 /* NanumSquareOTFRegular.otf in Resources */,
 				A676907F1FADE89500B9FCEF /* HomeViewController.storyboard in Resources */,
 				A676906B1FADDD7B00B9FCEF /* LaunchScreen.storyboard in Resources */,
+				2742C4BE204E1053006D7529 /* FeedCell.xib in Resources */,
+				2742C4C7204E1BA0006D7529 /* NanumSquareOTFExtraBold.otf in Resources */,
 				A676908D1FADEA6F00B9FCEF /* SearchNavigationController.storyboard in Resources */,
 				27E811DE20246FB300DF8244 /* NotiTableViewCell.xib in Resources */,
 				27E811E22024785300DF8244 /* SearchResultViewController.storyboard in Resources */,
@@ -414,6 +444,8 @@
 				27950ED92011E22F00472BAF /* NotiViewController.storyboard in Resources */,
 				277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */,
 				27950ECA2010C55900472BAF /* LoginViewController.storyboard in Resources */,
+				2742C4C8204E1BA0006D7529 /* NanumSquareOTFBold.otf in Resources */,
+				277A0CD8204CFD7300F23A36 /* TagListView.xib in Resources */,
 				27950EE42011E36C00472BAF /* NotiNavigationController.storyboard in Resources */,
 				A67690681FADDD7B00B9FCEF /* Assets.xcassets in Resources */,
 				A67690661FADDD7B00B9FCEF /* TabBarController.storyboard in Resources */,
@@ -522,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65BCBFB1FAE636900474AFA /* AlamofireLogger.swift in Sources */,
+				277A0CDC204D02BF00F23A36 /* Extensions+Yum.swift in Sources */,
 				27E811DC20246FAA00DF8244 /* NotiTableViewCell.swift in Sources */,
 				A67690841FADE91100B9FCEF /* HomeViewController.swift in Sources */,
 				27E811CB20244F3F00DF8244 /* MyCollectionViewCell.swift in Sources */,
@@ -531,19 +564,22 @@
 				A67690861FADE94300B9FCEF /* SearchViewContoller.swift in Sources */,
 				27E811D020245B5B00DF8244 /* FeedViewController.swift in Sources */,
 				A676908F1FADEA9000B9FCEF /* SearchNavigationController.swift in Sources */,
+				277A0CDA204D00A700F23A36 /* TagListView.swift in Sources */,
 				A67690631FADDD7B00B9FCEF /* TabBarController.swift in Sources */,
 				A67690941FADEEE400B9FCEF /* UIViewController+Yum.swift in Sources */,
 				27E811DA20246F9F00DF8244 /* NotiTableView.swift in Sources */,
 				27E811E420247A8800DF8244 /* SearchResultNavigationController.swift in Sources */,
 				27950EE22011E36100472BAF /* NotiNavigationController.swift in Sources */,
-				A676909C1FADF6B000B9FCEF /* FeedCell.swift in Sources */,
 				27E811C52024475A00DF8244 /* UIImageView+Yum.swift in Sources */,
 				27E811BF202429B600DF8244 /* ServerClient.swift in Sources */,
 				27950EDE2011E27800472BAF /* MyViewController.swift in Sources */,
 				27950EDB2011E23900472BAF /* NotiViewController.swift in Sources */,
 				27950EE62011E38800472BAF /* MyNavigtaionController.swift in Sources */,
+				2742C4C2204E170E006D7529 /* FeedTableView.swift in Sources */,
 				A67690921FADECD000B9FCEF /* DummyViewController.swift in Sources */,
+				2742C4C0204E1064006D7529 /* FeedCell.swift in Sources */,
 				A676908B1FADEA3100B9FCEF /* HomeNavigationController.swift in Sources */,
+				277A0CD6204CFD0D00F23A36 /* GraphicView.swift in Sources */,
 				A67690961FADF52700B9FCEF /* UITableView+Yum.swift in Sources */,
 				277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */,
 				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,

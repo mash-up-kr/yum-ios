@@ -11,14 +11,17 @@ import UIKit
 class FeedViewController: UIViewController {
     var feed: Feed!
     
-    @IBOutlet weak var feedCell: FeedCell!
-    @IBOutlet weak var feedCellHeight: NSLayoutConstraint!
+    @IBOutlet weak var feedCellContainer: UIView!
+    @IBOutlet weak var feedCellContainerHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        feedCell.feed = feed
-        feedCellHeight.constant = feedCell.cellHeight
+
+        let cell = UINib.load2(FeedCell.self)
+        cell.feed = feed
+        cell.height = cell.calcCellHeight(width: self.view.width)
+        feedCellContainerHeight.constant = cell.height
+        feedCellContainer.addSubview(cell)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

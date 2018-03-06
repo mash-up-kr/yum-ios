@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="pM8-Y1-Sjc" kind="relationship" relationship="rootViewController" id="dAk-lS-sZz"/>
+                        <segue destination="TRV-51-Nl0" kind="relationship" relationship="rootViewController" id="Hc1-A7-MrW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dap-hR-DeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -30,45 +31,27 @@
             <point key="canvasLocation" x="-265" y="-160"/>
         </scene>
         <!--검색 결과-->
-        <scene sceneID="foJ-iv-rZ1">
+        <scene sceneID="oKK-78-Uyb">
             <objects>
-                <tableViewController storyboardIdentifier="SearchResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pM8-Y1-Sjc" customClass="SearchResultViewController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ccJ-eo-beQ">
+                <viewController storyboardIdentifier="SearchResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TRV-51-Nl0" customClass="SearchResultViewController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Mt-6s-ZF8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" id="pU1-fZ-UOd" customClass="FeedCell" customModule="Yum" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pU1-fZ-UOd" id="MrO-HN-Mdn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pM8-Y1-Sjc" id="21i-Be-vcx"/>
-                            <outlet property="delegate" destination="pM8-Y1-Sjc" id="zC7-C9-7yH"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="검색 결과" id="Occ-59-78d">
-                        <barButtonItem key="leftBarButtonItem" title="back" id="rzq-1A-OI4">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Wj8-eM-Nv7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="검색 결과" id="b74-IO-sGZ">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="NZR-Sh-GtR">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="backBtnClicked" destination="pM8-Y1-Sjc" id="Mpr-LM-Nbc"/>
+                                <action selector="backBtnClicked" destination="TRV-51-Nl0" id="Xu4-ka-9nx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="6bw-UW-2RH">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </refreshControl>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jll-jN-pPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Su-zN-Qer" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="-159"/>
+            <point key="canvasLocation" x="526" y="-161"/>
         </scene>
     </scenes>
 </document>

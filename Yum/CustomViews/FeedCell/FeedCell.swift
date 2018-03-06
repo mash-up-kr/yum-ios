@@ -2,154 +2,58 @@
 //  FeedCell.swift
 //  Yum
 //
-//  Created by Ryan Yoo on 2017. 11. 4..
-//  Copyright © 2017년 Mash-up. All rights reserved.
+//  Created by Noverish Harold on 2018. 3. 6..
+//  Copyright © 2018년 Mash-up. All rights reserved.
 //
 
 import UIKit
-import ManualLayout
-import Alamofire
-import AlamofireImage
 
-final class FeedCell: UITableViewCell {
+class FeedCell: UITableViewCell {
+    @IBOutlet private weak var rootWidth: NSLayoutConstraint!
+    @IBOutlet private weak var profileImageView: UIImageView!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var heartBtn: UIButton!
+    @IBOutlet private weak var reportBtn: UIButton!
+    @IBOutlet private weak var mainImageView: UIImageView!
+    @IBOutlet private weak var contentLabel: UILabel!
+    @IBOutlet private weak var tagListView: TagListView!
+    @IBOutlet private weak var tagListViewHeight: NSLayoutConstraint!
     
-    @IBOutlet weak var containerStackView: UIStackView!
-    
-    @IBOutlet weak var userProfileImageView: UIImageView!
-    @IBOutlet weak var userNameLabel: UIButton!
-    @IBOutlet weak var foodImageActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var foodImageView: UIImageView!
-    @IBOutlet weak var bodyLabel: UILabel!
-    
-    @IBOutlet weak var calorieContainerView: UIView!
-    @IBOutlet weak var calorieButton: UIButton!
-    
-    @IBOutlet weak var tag1ContainerView: UIView!
-    @IBOutlet weak var tag1Button: UIButton!
-    
-    @IBOutlet weak var tag2ContainerView: UIView!
-    @IBOutlet weak var tag2Button: UIButton!
-    
-    @IBOutlet weak var tag3ContainerView: UIView!
-    @IBOutlet weak var tag3Button: UIButton!
-    
-    public var forEstimatedHeight: Bool = false
-    public var feed: Feed? {
+    var isEstimateCell: Bool = false
+    var vc: UIViewController!
+    var feed: Feed? = nil {
         didSet {
-            userNameLabel.setTitle(feed?.userName, for: .normal)
-            bodyLabel.text = feed?.body
-            
-            if !forEstimatedHeight {
-                loadUserProfileImage(userProfileImageUrl: feed?.userProfileImageUrl)
-                loadFoodImage(foodImageUrl: feed?.foodImageUrl)
+            guard let feed = feed else { return }
+
+            contentLabel.text = feed.body
+            tagListView.calorie = feed.calorie
+            tagListView.tags = feed.tags
+            tagListViewHeight.constant = tagListView.estimatedHeight
+
+            if !isEstimateCell {
+                userNameLabel.text = feed.userName
+                profileImageView.setImageUrl(feed.userProfileImageUrl)
+                mainImageView.setImageUrl(feed.foodImageUrl)
             }
         }
-    }
-    
-    private var isUserProfileImageLoading: Bool = false
-    private var userProfileImageUrlInLoading: String?
-    
-    private var isFoodImageLoading: Bool = false
-    private var foodImageUrlInLoading: String?
-    
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        commonInitialization()
-        initViewProperties()
     }
 
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInitialization()
-        initViewProperties()
-    }
-    
-}
+    override func awakeFromNib() {
+        super.awakeFromNib()
 
-extension FeedCell {
-    
-    private func commonInitialization() {
-        let view = Bundle.main.loadNibNamed(className, owner: self, options: nil)?.first as! UIView // swiftlint:disable:this force_cast
-        view.frame = self.bounds
-        self.addSubview(view)
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clicked)))
+        self.profileImageView.layer.cornerRadius = profileImageView.width / 2
+        self.profileImageView.layer.masksToBounds = true
     }
-    
-    private func initViewProperties() {
-        userProfileImageView.layer.cornerRadius = 18
-        userProfileImageView.layer.masksToBounds = true
-        
-        calorieContainerView.layer.cornerRadius = 15
-        calorieContainerView.layer.masksToBounds = true
-        
-        tag1ContainerView.layer.cornerRadius = 15
-        tag1Button.layer.masksToBounds = true
-        
-        tag2ContainerView.layer.cornerRadius = 15
-        tag2Button.layer.masksToBounds = true
-        
-        tag3ContainerView.layer.cornerRadius = 15
-        tag3Button.layer.masksToBounds = true
-    }
-    
-    private func loadUserProfileImage(userProfileImageUrl: String?) {
-        guard let userProfileImageUrl = userProfileImageUrl else {
-            userProfileImageView.image = #imageLiteral(resourceName: "sample-user-profile-image") // TODO: set default image
-            return
-        }
-        self.userProfileImageView.image = nil // TODO: set default image
-        userProfileImageUrlInLoading = userProfileImageUrl
-        Alamofire.request(userProfileImageUrl).responseImage { response in
-            guard self.userProfileImageUrlInLoading == userProfileImageUrl else {
-                return
-            }
-            guard let image = response.result.value else {
-                self.userProfileImageView.image = #imageLiteral(resourceName: "sample-user-profile-image") // TODO: set default image
-                return
-            }
-            self.userProfileImageView.image = image
-            self.userProfileImageUrlInLoading = nil
-        }
-    }
-    
-    private func loadFoodImage(foodImageUrl: String?) {
-        guard let foodImageUrl = foodImageUrl else {
-            self.foodImageView.image = #imageLiteral(resourceName: "sample-user-profile-image") // TODO: set error image
-            return
-        }
-        startActivityIndicator()
-        foodImageUrlInLoading = foodImageUrl
-        Alamofire.request(foodImageUrl).responseImage { response in
-            guard self.foodImageUrlInLoading == foodImageUrl else {
-                return
-            }
-            defer { self.stopActivityIndicator() }
-            guard let image = response.result.value else {
-                self.foodImageView.image = #imageLiteral(resourceName: "sample-user-profile-image") // TODO: set error image
-                return
-            }
-            self.foodImageView.image = image
-            self.foodImageUrlInLoading = nil
-        }
-    }
-    
-    private func startActivityIndicator() {
-        foodImageActivityIndicator.startAnimating()
-        foodImageView.isHidden = true
-    }
-    
-    private func stopActivityIndicator() {
-        foodImageActivityIndicator.stopAnimating()
-        foodImageView.isHidden = false
-    }
-    
-}
 
-extension FeedCell {
-    
-    public var cellHeight: CGFloat {
-        setNeedsLayout()
-        layoutIfNeeded()
-        return containerStackView.height
+    @objc func clicked() {
+        let vc = UIStoryboard.instantiate(FeedViewController.self)
+        vc.feed = self.feed
+        self.vc.present(vc, animated: true)
     }
-    
+
+    func calcCellHeight(width: CGFloat) -> CGFloat {
+        self.rootWidth.constant = width
+        return self.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+    }
 }

@@ -12,7 +12,7 @@
         <!--Search Navigation Controller-->
         <scene sceneID="I3Q-2O-grx">
             <objects>
-                <navigationController storyboardIdentifier="SearchNavigationController" id="bep-92-8SN" customClass="SearchNavigationController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SearchNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bep-92-8SN" customClass="SearchNavigationController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab-search-off" selectedImage="tab-search-on" id="FSh-8i-0lq">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>

@@ -42,35 +42,32 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FeedCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="359" translatesAutoresizingMaskIntoConstraints="NO" id="fUz-yN-YQe" customClass="FeedCell" customModule="Yum" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="45"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fUz-yN-YQe" id="fnW-Op-Ez1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b73-Cd-VG8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="Bcx-Tb-LgS"/>
+                                    <constraint firstAttribute="height" constant="100" id="atz-PK-3jJ"/>
                                 </constraints>
-                            </tableViewCell>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CQX-ff-cjI" firstAttribute="leading" secondItem="Epr-8E-ZWp" secondAttribute="leading" id="8Td-4h-g75"/>
+                            <constraint firstItem="eLz-aF-knP" firstAttribute="trailing" secondItem="b73-Cd-VG8" secondAttribute="trailing" id="9vk-cP-oPb"/>
                             <constraint firstItem="KT0-Kq-fK1" firstAttribute="top" secondItem="CQX-ff-cjI" secondAttribute="bottom" id="ClA-Jm-CnT"/>
                             <constraint firstItem="KT0-Kq-fK1" firstAttribute="leading" secondItem="eLz-aF-knP" secondAttribute="leading" id="NV4-Yb-dtr"/>
                             <constraint firstItem="CQX-ff-cjI" firstAttribute="top" secondItem="Epr-8E-ZWp" secondAttribute="top" id="Ox9-KK-cxq"/>
                             <constraint firstItem="KT0-Kq-fK1" firstAttribute="trailing" secondItem="eLz-aF-knP" secondAttribute="trailing" id="SSo-4A-Epv"/>
+                            <constraint firstItem="b73-Cd-VG8" firstAttribute="top" secondItem="KT0-Kq-fK1" secondAttribute="bottom" id="dzc-AN-GXO"/>
                             <constraint firstAttribute="trailing" secondItem="CQX-ff-cjI" secondAttribute="trailing" id="hKj-hg-u2p"/>
                             <constraint firstItem="KT0-Kq-fK1" firstAttribute="top" secondItem="eLz-aF-knP" secondAttribute="top" id="jVx-rQ-NP0"/>
-                            <constraint firstItem="fUz-yN-YQe" firstAttribute="leading" secondItem="eLz-aF-knP" secondAttribute="leading" id="p1t-4p-5av"/>
-                            <constraint firstItem="fUz-yN-YQe" firstAttribute="top" secondItem="KT0-Kq-fK1" secondAttribute="bottom" id="p3O-p1-WRO"/>
-                            <constraint firstItem="fUz-yN-YQe" firstAttribute="trailing" secondItem="eLz-aF-knP" secondAttribute="trailing" id="qXk-Va-jmZ"/>
+                            <constraint firstItem="b73-Cd-VG8" firstAttribute="leading" secondItem="eLz-aF-knP" secondAttribute="leading" id="tQc-Pu-dXE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLz-aF-knP"/>
                     </view>
                     <connections>
-                        <outlet property="feedCell" destination="fUz-yN-YQe" id="1mq-TK-fMm"/>
-                        <outlet property="feedCellHeight" destination="Bcx-Tb-LgS" id="JX0-Xn-6fm"/>
+                        <outlet property="feedCellContainer" destination="b73-Cd-VG8" id="vmb-3G-BLy"/>
+                        <outlet property="feedCellContainerHeight" destination="atz-PK-3jJ" id="btd-hl-fbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jr9-IW-Xk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
