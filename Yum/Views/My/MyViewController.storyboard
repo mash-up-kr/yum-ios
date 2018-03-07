@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFRegular.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--My View Controller-->
         <scene sceneID="J1U-5D-iF7">
@@ -101,15 +106,14 @@
                                     <constraint firstAttribute="height" constant="2" id="Q9Q-WU-OKw"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I1-JO-9L1">
-                                <rect key="frame" x="18" y="142" width="339" height="43"/>
-                                <string key="text">문구를 넣어봐요~~~~~!!!!문구를 넣어봐요~~~~~!!!!문구를 넣어봐요~~~~~!!!!문구를 넣어봐요~~~~~!!!!문구를 넣어봐요~~~~~!!!!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="건강하게 챙겨먹는 게 이번달 목표!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6I1-JO-9L1">
+                                <rect key="frame" x="18" y="142" width="339" height="13.5"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HVr-Zk-82v" customClass="MyCollectionView" customModule="Yum" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="203" width="375" height="464"/>
+                                <rect key="frame" x="0.0" y="173.5" width="375" height="493.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aWw-ee-WG6">
                                     <size key="itemSize" width="50" height="50"/>

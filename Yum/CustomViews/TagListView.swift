@@ -51,6 +51,7 @@ class TagListView: UIView {
                 label.cornerRadius = tagView.cornerRadius
                 label.backgroundColor = tagView.backgroundColor
                 label.font = tagView.font
+                label.textColor = tagView.textColor
 
                 let text = "#\(tag)"
                 let estimatedLabelWidth

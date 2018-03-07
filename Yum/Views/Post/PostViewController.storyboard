@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFRegular.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Post View Controller-->
         <scene sceneID="kDA-XK-yqL">
@@ -60,10 +65,10 @@
                                 <rect key="frame" x="0.0" y="65" width="375" height="602"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-xM-1UL">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="545"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-ed-xNY">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="545"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-55-ve5">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -79,103 +84,114 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJL-f3-m7V">
-                                                        <rect key="frame" x="0.0" y="376" width="375" height="50"/>
+                                                        <rect key="frame" x="0.0" y="376" width="375" height="56.5"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HBL-iw-TkL">
-                                                                <rect key="frame" x="8" y="8" width="359" height="34"/>
+                                                                <rect key="frame" x="18" y="10" width="339" height="36.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Keo-UC-cpR"/>
                                                                 </constraints>
                                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="next"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                             </textView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여기에 입력하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgJ-1D-qNz" userLabel="Content Placeholder">
-                                                                <rect key="frame" x="13" y="16" width="101" height="17"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <rect key="frame" x="24" y="19" width="90.5" height="13.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                                <color key="textColor" red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="1" colorSpace="deviceRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="HBL-iw-TkL" secondAttribute="trailing" constant="8" id="I69-JB-ycK"/>
-                                                            <constraint firstItem="OgJ-1D-qNz" firstAttribute="leading" secondItem="RJL-f3-m7V" secondAttribute="leading" constant="13" id="cit-cH-qsR"/>
-                                                            <constraint firstItem="HBL-iw-TkL" firstAttribute="leading" secondItem="RJL-f3-m7V" secondAttribute="leading" constant="8" id="hCs-T0-MUd"/>
-                                                            <constraint firstItem="HBL-iw-TkL" firstAttribute="top" secondItem="RJL-f3-m7V" secondAttribute="top" constant="8" id="o6s-fv-MPH"/>
-                                                            <constraint firstAttribute="bottom" secondItem="HBL-iw-TkL" secondAttribute="bottom" constant="8" id="q6D-Py-3uD"/>
-                                                            <constraint firstItem="OgJ-1D-qNz" firstAttribute="top" secondItem="RJL-f3-m7V" secondAttribute="top" constant="16" id="sRf-bi-gtb"/>
+                                                            <constraint firstItem="OgJ-1D-qNz" firstAttribute="leading" secondItem="HBL-iw-TkL" secondAttribute="leading" constant="6" id="5XI-G0-tDV"/>
+                                                            <constraint firstItem="OgJ-1D-qNz" firstAttribute="top" secondItem="HBL-iw-TkL" secondAttribute="top" constant="9" id="Bhl-l4-jzf"/>
+                                                            <constraint firstItem="HBL-iw-TkL" firstAttribute="centerX" secondItem="RJL-f3-m7V" secondAttribute="centerX" id="Cvf-WD-z2n"/>
+                                                            <constraint firstItem="HBL-iw-TkL" firstAttribute="leading" secondItem="RJL-f3-m7V" secondAttribute="leading" constant="18" id="hCs-T0-MUd"/>
+                                                            <constraint firstItem="HBL-iw-TkL" firstAttribute="top" secondItem="RJL-f3-m7V" secondAttribute="top" constant="10" id="o6s-fv-MPH"/>
+                                                            <constraint firstAttribute="bottom" secondItem="HBL-iw-TkL" secondAttribute="bottom" constant="10" id="q6D-Py-3uD"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="yRv-M5-klc"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A45-nP-HZY" userLabel="Divider">
-                                                        <rect key="frame" x="0.0" y="426" width="375" height="1"/>
+                                                        <rect key="frame" x="0.0" y="432.5" width="375" height="1"/>
                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="iKB-6d-GbH"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-yF-6M1">
-                                                        <rect key="frame" x="0.0" y="427" width="375" height="50"/>
+                                                        <rect key="frame" x="0.0" y="433.5" width="375" height="54"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="칼로리를 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHe-be-nPx">
-                                                                <rect key="frame" x="14" y="8" width="347" height="34"/>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MkF-92-7qX">
+                                                                <rect key="frame" x="18" y="10" width="339" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="34" id="2BP-UW-ATq"/>
+                                                                    <constraint firstAttribute="height" constant="34" id="q3D-tc-cKc"/>
                                                                 </constraints>
-                                                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="next"/>
-                                                            </textField>
+                                                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                            </textView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="칼로리를 입력하세요 ex) 450" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TI2-wy-7tL" userLabel="Content Placeholder">
+                                                                <rect key="frame" x="24" y="19" width="145.5" height="13.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                                <color key="textColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="deviceRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="dHe-be-nPx" secondAttribute="trailing" constant="14" id="FrL-Qd-H46"/>
-                                                            <constraint firstItem="dHe-be-nPx" firstAttribute="top" secondItem="LFO-yF-6M1" secondAttribute="top" constant="8" id="rJQ-e8-eBr"/>
-                                                            <constraint firstAttribute="bottom" secondItem="dHe-be-nPx" secondAttribute="bottom" constant="8" id="s1A-J0-rjK"/>
-                                                            <constraint firstItem="dHe-be-nPx" firstAttribute="leading" secondItem="LFO-yF-6M1" secondAttribute="leading" constant="14" id="uqI-tO-cjr"/>
+                                                            <constraint firstAttribute="bottom" secondItem="MkF-92-7qX" secondAttribute="bottom" constant="10" id="1eH-s0-lg8"/>
+                                                            <constraint firstItem="TI2-wy-7tL" firstAttribute="top" secondItem="MkF-92-7qX" secondAttribute="top" constant="9" id="Fjx-bL-kvq"/>
+                                                            <constraint firstItem="TI2-wy-7tL" firstAttribute="leading" secondItem="MkF-92-7qX" secondAttribute="leading" constant="6" id="MdT-9s-uif"/>
+                                                            <constraint firstItem="MkF-92-7qX" firstAttribute="top" secondItem="LFO-yF-6M1" secondAttribute="top" constant="10" id="a8h-Qb-Mn6"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZs-9X-R3d" userLabel="Divider">
-                                                        <rect key="frame" x="0.0" y="477" width="375" height="1"/>
+                                                        <rect key="frame" x="0.0" y="487.5" width="375" height="1"/>
                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="YeU-IL-Xk6"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iQ-Uu-m03">
-                                                        <rect key="frame" x="0.0" y="478" width="375" height="50"/>
+                                                        <rect key="frame" x="0.0" y="488.5" width="375" height="56.5"/>
                                                         <subviews>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uG3-Ns-71m">
-                                                                <rect key="frame" x="8" y="8" width="359" height="34"/>
+                                                                <rect key="frame" x="18" y="10" width="339" height="36.5"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="MTN-bA-U5s"/>
                                                                 </constraints>
                                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                             </textView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#이렇게 #입력 #하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdS-vp-NFL" userLabel="Tag Placeholder">
-                                                                <rect key="frame" x="13" y="16" width="131" height="17"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="재료를 입력하세요 #병아리콩 #샐러리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdS-vp-NFL" userLabel="Tag Placeholder">
+                                                                <rect key="frame" x="24" y="19" width="187" height="13.5"/>
+                                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                                <color key="textColor" red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="1" colorSpace="deviceRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstItem="YdS-vp-NFL" firstAttribute="leading" secondItem="6iQ-Uu-m03" secondAttribute="leading" constant="13" id="Hk7-Bl-Fgh"/>
-                                                            <constraint firstItem="YdS-vp-NFL" firstAttribute="top" secondItem="6iQ-Uu-m03" secondAttribute="top" constant="16" id="Inr-cy-Xcx"/>
-                                                            <constraint firstAttribute="trailing" secondItem="uG3-Ns-71m" secondAttribute="trailing" constant="8" id="VFS-JR-piK"/>
-                                                            <constraint firstItem="uG3-Ns-71m" firstAttribute="top" secondItem="6iQ-Uu-m03" secondAttribute="top" constant="8" id="aAi-fl-yOi"/>
-                                                            <constraint firstAttribute="bottom" secondItem="uG3-Ns-71m" secondAttribute="bottom" constant="8" id="ead-tP-Pr7"/>
+                                                            <constraint firstItem="YdS-vp-NFL" firstAttribute="leading" secondItem="uG3-Ns-71m" secondAttribute="leading" constant="6" id="3Wd-bd-oCX"/>
+                                                            <constraint firstItem="uG3-Ns-71m" firstAttribute="top" secondItem="6iQ-Uu-m03" secondAttribute="top" constant="10" id="aAi-fl-yOi"/>
+                                                            <constraint firstAttribute="bottom" secondItem="uG3-Ns-71m" secondAttribute="bottom" constant="10" id="ead-tP-Pr7"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="iKh-qE-BvN"/>
-                                                            <constraint firstItem="uG3-Ns-71m" firstAttribute="leading" secondItem="6iQ-Uu-m03" secondAttribute="leading" constant="8" id="neu-bW-zTZ"/>
+                                                            <constraint firstItem="YdS-vp-NFL" firstAttribute="top" secondItem="uG3-Ns-71m" secondAttribute="top" constant="9" id="xKd-x8-snd"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="MkF-92-7qX" firstAttribute="leading" secondItem="HBL-iw-TkL" secondAttribute="leading" id="582-Cx-3Hn"/>
+                                                    <constraint firstItem="uG3-Ns-71m" firstAttribute="leading" secondItem="MkF-92-7qX" secondAttribute="leading" id="FNB-7c-CIB"/>
+                                                    <constraint firstItem="MkF-92-7qX" firstAttribute="trailing" secondItem="HBL-iw-TkL" secondAttribute="trailing" id="VTM-o9-eig"/>
+                                                    <constraint firstItem="uG3-Ns-71m" firstAttribute="trailing" secondItem="MkF-92-7qX" secondAttribute="trailing" id="YmR-6m-Kve"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,7 +232,8 @@
                         <viewLayoutGuide key="safeArea" id="iXm-uh-o8R"/>
                     </view>
                     <connections>
-                        <outlet property="calorieField" destination="dHe-be-nPx" id="DMt-Q6-CvG"/>
+                        <outlet property="calorieField" destination="MkF-92-7qX" id="1Az-VM-zuj"/>
+                        <outlet property="caloriePlaceholder" destination="TI2-wy-7tL" id="E4Z-xL-fAN"/>
                         <outlet property="contentField" destination="HBL-iw-TkL" id="yzs-HW-UpH"/>
                         <outlet property="contentPlaceholder" destination="OgJ-1D-qNz" id="ztY-bW-Oik"/>
                         <outlet property="imageView" destination="fgj-55-ve5" id="xm8-WC-nz7"/>

@@ -45,25 +45,32 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb329893107494983</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>329893107494983</string>
-    <key>FacebookDisplayName</key>
-    <string>com.mash-up.ios.Yum</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb329893107494983</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>329893107494983</string>
+	<key>FacebookDisplayName</key>
+	<string>com.mash-up.ios.Yum</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NanumSquareOTFBold.otf</string>
+		<string>NanumSquareOTFExtraBold.otf</string>
+		<string>NanumSquareOTFLight.otf</string>
+		<string>NanumSquareOTFRegular.otf</string>
+	</array>
 </dict>
 </plist>

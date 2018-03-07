@@ -16,13 +16,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let titleImageView = UIImageView(image:  #imageLiteral(resourceName:"navi-logo"))
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName:"navi-logo"))
         titleImageView.contentMode = .scaleAspectFit
         titleImageView.frame = CGRect(x: -30, y: -16, width: 60, height: 32)
         let view = UIView(frame: CGRect.zero)
         view.addSubview(titleImageView)
         navigationItem.titleView = view
-        
+
         tableView.initiate(self)
 
         ServerClient.getFeedList { feeds in

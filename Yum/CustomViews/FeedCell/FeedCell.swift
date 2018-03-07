@@ -18,14 +18,23 @@ class FeedCell: UITableViewCell {
     @IBOutlet private weak var contentLabel: UILabel!
     @IBOutlet private weak var tagListView: TagListView!
     @IBOutlet private weak var tagListViewHeight: NSLayoutConstraint!
-    
+
     var isEstimateCell: Bool = false
     var vc: UIViewController!
     var feed: Feed? = nil {
         didSet {
-            guard let feed = feed else { return }
+            guard let feed = feed else {
+                return
+            }
 
-            contentLabel.text = feed.body
+            let content = feed.userName + "  " + feed.body
+            let attributedString = NSMutableAttributedString(string: content, attributes: [
+                .font: UIFont(name: "NanumSquareOTFR", size: 12)!,
+                .foregroundColor: UIColor(white: 0, alpha: 1)
+            ])
+            attributedString.addAttribute(.font, value: UIFont(name: "NanumSquareOTFB", size: 12)!, range: NSRange(location: 0, length: feed.userName.count + 2))
+
+            contentLabel.attributedText = attributedString
             tagListView.calorie = feed.calorie
             tagListView.tags = feed.tags
             tagListViewHeight.constant = tagListView.estimatedHeight

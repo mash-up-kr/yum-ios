@@ -10,30 +10,32 @@ import UIKit
 import DKImagePickerController
 import Sharaku
 
-class PostViewController: UIViewController, UITextViewDelegate, SHViewControllerDelegate {
-    
+class PostViewController: UIViewController {
+
     var originImage: UIImage!
-    
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var contentField: UITextView!
     @IBOutlet weak var contentPlaceholder: UILabel!
-    @IBOutlet weak var calorieField: UITextField!
+    @IBOutlet weak var calorieField: UITextView!
+    @IBOutlet weak var caloriePlaceholder: UILabel!
     @IBOutlet weak var tagField: UITextView!
     @IBOutlet weak var tagPlaceholder: UILabel!
     @IBOutlet weak var scrollViewBottom: NSLayoutConstraint!
-    
+
     var pickerShowed = false
     var keyboardShowing = false
 
     override func viewDidLoad() {
         contentField.delegate = self
+        calorieField.delegate = self
         tagField.delegate = self
-        
+
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backgroundTapped)))
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         if !pickerShowed {
             let pickerController = DKImagePickerController()
@@ -42,11 +44,11 @@ class PostViewController: UIViewController, UITextViewDelegate, SHViewController
                 if assets.count == 0 {
                     self.dismiss(animated: false)
                 }
-                
+
                 for img in assets {
                     img.fetchOriginalImageWithCompleteBlock { (image, _) in
                         self.originImage = image!
-                        
+
                         DispatchQueue.main.async {
                             let vc = SHViewController(image: self.originImage)
                             vc.delegate = self
@@ -55,58 +57,58 @@ class PostViewController: UIViewController, UITextViewDelegate, SHViewController
                     }
                 }
             }
-            
+
             present(pickerController, animated: false)
             pickerShowed = true
         }
     }
-    
-    func shViewControllerImageDidFilter(image: UIImage) {
-        self.imageView.image = image
-    }
-    
-    func shViewControllerDidCancel() {
-        self.imageView.image = self.originImage
-    }
-    
+
     @IBAction func doneClicked() {
-        guard let content = contentField.text, let calorie = Int(calorieField.text ?? "") else { // }, let image = imageView.image, let imageData = UIImagePNGRepresentation(image) else {
+        guard let content = contentField.text, let calorie = Int(calorieField.text ?? "") else {
             return
         }
-        
+
         ServerClient.writeFeed(content: content, calorie: calorie, tags: [], image: self.imageView.image!) { _ in
             DispatchQueue.main.async {
                 self.dismiss(animated: true, completion: nil)
             }
         }
-        
-//        Feed.postFeed(feed: feed, imageData: imageData) { success in
-//            if success {
-//                self.dismiss(animated: true, completion: nil)
-//            } else {
-//
-//            }
-//        }
     }
-    
+
     @IBAction func cancelClicked() {
         dismiss(animated: true, completion: nil)
     }
-    
+}
+
+extension PostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         if textView == contentField {
             contentPlaceholder.isHidden = (textView.text == "") ? false : true
+        } else if textView == calorieField {
+            caloriePlaceholder.isHidden = (textView.text == "") ? false : true
         } else if textView == tagField {
             tagPlaceholder.isHidden = (textView.text == "") ? false : true
         }
     }
-    
+}
+
+extension PostViewController: SHViewControllerDelegate {
+    func shViewControllerImageDidFilter(image: UIImage) {
+        self.imageView.image = image
+    }
+
+    func shViewControllerDidCancel() {
+        self.imageView.image = self.originImage
+    }
+}
+
+extension PostViewController {
     @objc func backgroundTapped() {
         if keyboardShowing {
             self.view.endEditing(true)
         }
     }
-    
+
     @objc func keyboardWillShow(notification: NSNotification) {
         keyboardShowing = true
         guard let keyboardHeight = keyboardHeight(from: notification) else {
@@ -124,7 +126,7 @@ class PostViewController: UIViewController, UITextViewDelegate, SHViewController
         let duration = keyboardAnimationDuration(from: notification) ?? 0.25
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: animations, completion: nil)
     }
-    
+
     @objc func keyboardWillHide(notification: NSNotification) {
         keyboardShowing = false
         scrollViewBottom.constant = 0
@@ -134,5 +136,11 @@ class PostViewController: UIViewController, UITextViewDelegate, SHViewController
         }
         let duration = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? Double) ?? 0.25
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseInOut, animations: animations, completion: nil)
+    }
+}
+
+extension PostViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
