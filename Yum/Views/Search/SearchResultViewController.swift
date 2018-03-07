@@ -14,6 +14,20 @@ final class SearchResultViewController: UIViewController {
     var tag: String?
     var userName: String?
     
+    @IBOutlet private weak var tableView: FeedTableView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.initiate(self)
+
+        ServerClient.search(startCalorie: startCalorie, endCalorie: endCalorie, tag: tag, userName: userName) { feeds in
+            DispatchQueue.main.async {
+                self.tableView.feeds = feeds
+            }
+        }
+    }
+
     @IBAction func backBtnClicked() {
         self.navigationController?.dismiss(animated: true)
     }

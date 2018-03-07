@@ -37,7 +37,19 @@
                     <view key="view" contentMode="scaleToFill" id="5Mt-6s-ZF8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SSZ-MZ-G8u" customClass="FeedTableView" customModule="Yum" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SSZ-MZ-G8u" firstAttribute="top" secondItem="Wj8-eM-Nv7" secondAttribute="top" id="1Ou-6S-0wl"/>
+                            <constraint firstItem="SSZ-MZ-G8u" firstAttribute="trailing" secondItem="Wj8-eM-Nv7" secondAttribute="trailing" id="R2S-bq-5bR"/>
+                            <constraint firstItem="SSZ-MZ-G8u" firstAttribute="leading" secondItem="Wj8-eM-Nv7" secondAttribute="leading" id="SyL-Sa-scW"/>
+                            <constraint firstItem="SSZ-MZ-G8u" firstAttribute="bottom" secondItem="Wj8-eM-Nv7" secondAttribute="bottom" id="uAH-Iw-yDq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wj8-eM-Nv7"/>
                     </view>
                     <navigationItem key="navigationItem" title="검색 결과" id="b74-IO-sGZ">
@@ -48,10 +60,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="SSZ-MZ-G8u" id="xzd-IQ-mij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Su-zN-Qer" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="-161"/>
+            <point key="canvasLocation" x="525.60000000000002" y="-161.46926536731635"/>
         </scene>
     </scenes>
 </document>

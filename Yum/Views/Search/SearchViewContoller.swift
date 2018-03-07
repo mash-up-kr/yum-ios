@@ -27,11 +27,10 @@ class SearchViewContoller: UIViewController {
     }
     
     @IBAction func searchBtnClicked() {
-        let storyboard = UIStoryboard(name: "SearchResultViewController", bundle: nil)
-        
-        guard let nav = storyboard.instantiateViewController(withIdentifier: "SearchResultNavigationController") as? SearchResultNavigationController,
-            let vc = nav.topViewController as? SearchResultViewController else {
-                return
+        let nav = UIStoryboard.instantiate(SearchResultNavigationController.self, storyboardName: "SearchResultViewController")
+
+        guard let vc = nav.topViewController as? SearchResultViewController else {
+            fatalError()
         }
         
         vc.startCalorie = Int(calorieSlider.selectedMinValue)
