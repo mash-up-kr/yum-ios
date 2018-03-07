@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="235" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccK-Ca-u4U">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccK-Ca-u4U" customClass="LoadingImageView" customModule="Yum" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="235" height="210"/>
                     </imageView>
                 </subviews>

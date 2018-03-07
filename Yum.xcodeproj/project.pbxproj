@@ -31,8 +31,8 @@
 		27950EE42011E36C00472BAF /* NotiNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EE32011E36C00472BAF /* NotiNavigationController.storyboard */; };
 		27950EE62011E38800472BAF /* MyNavigtaionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EE52011E38800472BAF /* MyNavigtaionController.swift */; };
 		27950EE82011E39400472BAF /* MyNavigtaionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */; };
+		27BBC69F204F753A00DC61B5 /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BBC69E204F753A00DC61B5 /* LoadingImageView.swift */; };
 		27E811BF202429B600DF8244 /* ServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811BE202429B600DF8244 /* ServerClient.swift */; };
-		27E811C52024475A00DF8244 /* UIImageView+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C42024475A00DF8244 /* UIImageView+Yum.swift */; };
 		27E811C720244A3600DF8244 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C620244A3600DF8244 /* User.swift */; };
 		27E811C920244EFF00DF8244 /* MyCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811C820244EFF00DF8244 /* MyCollectionView.swift */; };
 		27E811CB20244F3F00DF8244 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811CA20244F3F00DF8244 /* MyCollectionViewCell.swift */; };
@@ -96,8 +96,8 @@
 		27950EE32011E36C00472BAF /* NotiNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotiNavigationController.storyboard; sourceTree = "<group>"; };
 		27950EE52011E38800472BAF /* MyNavigtaionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigtaionController.swift; sourceTree = "<group>"; };
 		27950EE72011E39400472BAF /* MyNavigtaionController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyNavigtaionController.storyboard; sourceTree = "<group>"; };
+		27BBC69E204F753A00DC61B5 /* LoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
 		27E811BE202429B600DF8244 /* ServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerClient.swift; sourceTree = "<group>"; };
-		27E811C42024475A00DF8244 /* UIImageView+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Yum.swift"; sourceTree = "<group>"; };
 		27E811C620244A3600DF8244 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27E811C820244EFF00DF8244 /* MyCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionView.swift; sourceTree = "<group>"; };
 		27E811CA20244F3F00DF8244 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -302,7 +302,6 @@
 				A67690951FADF52700B9FCEF /* UITableView+Yum.swift */,
 				A67690931FADEEE400B9FCEF /* UIViewController+Yum.swift */,
 				27E811BE202429B600DF8244 /* ServerClient.swift */,
-				27E811C42024475A00DF8244 /* UIImageView+Yum.swift */,
 				272E7E92204044E100EB8DEC /* LoginManager.swift */,
 				277A0CDB204D02BF00F23A36 /* Extensions+Yum.swift */,
 			);
@@ -341,6 +340,7 @@
 				277A0CD5204CFD0D00F23A36 /* GraphicView.swift */,
 				277A0CD7204CFD7300F23A36 /* TagListView.xib */,
 				277A0CD9204D00A700F23A36 /* TagListView.swift */,
+				27BBC69E204F753A00DC61B5 /* LoadingImageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -558,6 +558,7 @@
 				27E811DC20246FAA00DF8244 /* NotiTableViewCell.swift in Sources */,
 				A67690841FADE91100B9FCEF /* HomeViewController.swift in Sources */,
 				27E811CB20244F3F00DF8244 /* MyCollectionViewCell.swift in Sources */,
+				27BBC69F204F753A00DC61B5 /* LoadingImageView.swift in Sources */,
 				A6E3C0911FAE18A200F60DB1 /* Feed.swift in Sources */,
 				27E811C720244A3600DF8244 /* User.swift in Sources */,
 				27E811D820246E8800DF8244 /* Noti.swift in Sources */,
@@ -570,7 +571,6 @@
 				27E811DA20246F9F00DF8244 /* NotiTableView.swift in Sources */,
 				27E811E420247A8800DF8244 /* SearchResultNavigationController.swift in Sources */,
 				27950EE22011E36100472BAF /* NotiNavigationController.swift in Sources */,
-				27E811C52024475A00DF8244 /* UIImageView+Yum.swift in Sources */,
 				27E811BF202429B600DF8244 /* ServerClient.swift in Sources */,
 				27950EDE2011E27800472BAF /* MyViewController.swift in Sources */,
 				27950EDB2011E23900472BAF /* NotiViewController.swift in Sources */,

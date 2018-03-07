@@ -12,7 +12,7 @@ class MyViewController: UIViewController {
     var userName: String = ServerClient.userName // ViewController Parameter
     var user: User!
     
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: LoadingImageView!
     @IBOutlet weak var feedNumLabel: UILabel!
     @IBOutlet weak var followerNumLabel: UILabel!
     @IBOutlet weak var followingNumLabel: UILabel!

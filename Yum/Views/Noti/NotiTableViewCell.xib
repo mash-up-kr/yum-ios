@@ -36,7 +36,7 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cUK-af-eHK">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cUK-af-eHK" customClass="LoadingImageView" customModule="Yum" customModuleProvider="target">
                         <rect key="frame" x="320" y="10.5" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="B68-CS-Tut"/>

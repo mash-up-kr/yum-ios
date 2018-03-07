@@ -9,6 +9,6 @@
 import UIKit
 
 class NotiTableViewCell: UITableViewCell {
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: LoadingImageView!
     @IBOutlet weak var nameLabel: UILabel!
 }

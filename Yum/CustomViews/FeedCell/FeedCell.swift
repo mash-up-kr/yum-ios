@@ -10,11 +10,11 @@ import UIKit
 
 class FeedCell: UITableViewCell {
     @IBOutlet private weak var rootWidth: NSLayoutConstraint!
-    @IBOutlet private weak var profileImageView: UIImageView!
+    @IBOutlet private weak var profileImageView: LoadingImageView!
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var heartBtn: UIButton!
     @IBOutlet private weak var reportBtn: UIButton!
-    @IBOutlet private weak var mainImageView: UIImageView!
+    @IBOutlet private weak var mainImageView: LoadingImageView!
     @IBOutlet private weak var contentLabel: UILabel!
     @IBOutlet private weak var tagListView: TagListView!
     @IBOutlet private weak var tagListViewHeight: NSLayoutConstraint!

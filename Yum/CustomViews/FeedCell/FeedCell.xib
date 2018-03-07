@@ -31,7 +31,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWR-hr-FwT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="602.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wIf-fV-cn9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wIf-fV-cn9" customClass="LoadingImageView" customModule="Yum" customModuleProvider="target">
                                 <rect key="frame" x="22" y="13" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="buU-rw-JFL"/>
@@ -52,7 +52,7 @@
                                 <rect key="frame" x="267" y="14" width="37" height="37"/>
                                 <state key="normal" image="btn-heart-off"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbe-Kx-YDp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbe-Kx-YDp" customClass="LoadingImageView" customModule="Yum" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="58" width="375" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Mbe-Kx-YDp" secondAttribute="height" multiplier="1:1" id="zvo-sp-Nr3"/>
