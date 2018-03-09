@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    private var cellForEstimate: FeedCell!
+    private var cellForEstimate: FeedCellContent!
 
     @IBOutlet private weak var tableView: FeedTableView!
 

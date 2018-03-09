@@ -12,24 +12,16 @@ import AlamofireImage
 
 class LoadingImageView: UIImageView {
 
+    private var imageUrl: String?
     private var indicator: UIActivityIndicatorView?
     private var nowLoadingNum = 0
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-
-    required init?(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-        setup()
-    }
-
-    func setup() {
-
-    }
-
     func setImageUrl(_ url: String) {
+        if self.imageUrl == url {
+            return
+        }
+
+        self.imageUrl = url
         self.nowLoadingNum += 1
         self.image = nil
 

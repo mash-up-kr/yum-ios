@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 class ServerClient {
+    // TODO add error parameter
+
     static let HOST = "http://52.78.80.125:3003"
 
     static var userToken: String?
@@ -30,10 +32,9 @@ class ServerClient {
             }
 
             let json = JSON(data)
-            print(url)
-            print(method)
-            print(parameters)
-            print(json)
+//            print("\(method) - \(url)")
+//            print(parameters)
+//            print(json)
             callback?(json)
         }
     }
@@ -142,17 +143,62 @@ class ServerClient {
 
     static func isLikeFeed(feedId: Int,
                            callback: ((Bool) -> Void)? = nil) {
+        let url = HOST + "/feed/like/\(feedId)"
+        let method: HTTPMethod = HTTPMethod.get
+        let parameters: Parameters = [
+            "userId": ServerClient.userId
+        ]
 
+        request(url, method, parameters) { json in
+            guard let json = json else {
+                return
+            }
+
+            if json["code"].intValue == 1 {
+                callback?(json["isLike"].boolValue)
+            }
+        }
     }
 
     static func likeFeed(feedId: Int,
                          callback: ((Bool) -> Void)? = nil) {
+        let url = HOST + "/feed/like/\(feedId)"
+        let method: HTTPMethod = HTTPMethod.post
+        let parameters: Parameters = [
+            "userId": ServerClient.userId
+        ]
 
+        request(url, method, parameters) { json in
+            callback?(true)
+        }
     }
 
     static func unlikeFeed(feedId: Int,
                            callback: ((Bool) -> Void)? = nil) {
+        let url = HOST + "/feed/like/\(feedId)"
+        let method: HTTPMethod = HTTPMethod.delete
+        let parameters: Parameters = [
+            "userId": ServerClient.userId
+        ]
 
+        request(url, method, parameters) { json in
+            callback?(true)
+        }
+    }
+
+    static func toggleFeedLike(feedId: Int,
+                               callback: ((Bool) -> Void)? = nil) {
+        isLikeFeed(feedId: feedId) { isLike in
+            if isLike {
+                unlikeFeed(feedId: feedId) { success in
+                    callback?(success)
+                }
+            } else {
+                likeFeed(feedId: feedId) { success in
+                    callback?(success)
+                }
+            }
+        }
     }
 
     static func search(startCalorie: Int,

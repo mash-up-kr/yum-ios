@@ -97,17 +97,34 @@ extension UIStoryboard {
     }
 }
 
-extension UINib {
-    static func load2<T: UIView>(_ type: T.Type) -> T {
-        let name = String(describing: type)
-        guard let nib = Bundle.main.loadNibNamed(name, owner: self, options: nil)?.first else {
+extension UIView {
+    static func loadFromNib(_ name: String, owner: Any? = nil) -> UIView {
+        guard let nib = Bundle.main.loadNibNamed(name, owner: owner, options: nil)?.first else {
             fatalError("Cannot load nib whose type is '\(name)'")
         }
 
-        guard let v = nib as? T else {
+        guard let v = nib as? UIView else {
             fatalError("Cannot cast '\(nib)' to '\(name)'")
         }
 
         return v
+    }
+}
+
+extension UIViewController {
+    func showYesNoAlertView(title: String = "", content: String = "", callback: ((Bool) -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: content, preferredStyle: .alert)
+
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            callback?(true)
+        }
+        alert.addAction(yesAction)
+
+        let noAction = UIAlertAction(title: "No", style: .default) { _ in
+            callback?(false)
+        }
+        alert.addAction(noAction)
+
+        self.present(alert, animated: true)
     }
 }
