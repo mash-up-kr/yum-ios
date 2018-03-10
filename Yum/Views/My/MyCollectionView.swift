@@ -52,7 +52,7 @@ extension MyCollectionView: UICollectionViewDataSource {
         
         if let cell = cell as? MyCollectionViewCell {
             let feed = feeds[indexPath.row]
-            cell.image.setImageUrl(feed.foodImageUrl)
+            cell.image.imageUrl = feed.foodImageUrl
         }
         
         return cell

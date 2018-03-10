@@ -34,7 +34,7 @@ class MyViewController: UIViewController {
             self.user = user
             
             DispatchQueue.main.async {
-                self.profileImage.setImageUrl(user.userProfile)
+                self.profileImage.imageUrl = user.userProfile
                 self.feedNumLabel.text = String(user.feedNum)
                 self.followerNumLabel.text = String(user.followerNum)
                 self.followingNumLabel.text = String(user.followingNum)

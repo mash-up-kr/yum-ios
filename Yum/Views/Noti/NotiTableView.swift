@@ -36,7 +36,7 @@ extension NotiTableView: UITableViewDataSource {
         
         let noti = notis[indexPath.row]
         
-        cell.profileImage.setImageUrl(noti.userProfile)
+        cell.profileImage.imageUrl = noti.userProfile
         cell.nameLabel.text = noti.userName
         
         return cell

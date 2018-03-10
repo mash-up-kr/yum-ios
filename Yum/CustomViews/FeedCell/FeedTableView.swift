@@ -54,7 +54,7 @@ extension FeedTableView: UITableViewDataSource {
         view.feed = feeds[indexPath.row]
         view.openDetailWhenClicked = true
         view.vc = self.vc
-        view.y = 0 // I don't know why this is necessary
+        view.y = 0 // TODO I don't know why this is necessary
         view.sizeToFit()
 
         return cell

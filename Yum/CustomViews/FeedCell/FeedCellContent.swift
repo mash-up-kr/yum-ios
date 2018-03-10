@@ -70,9 +70,9 @@ class FeedCellContent: UIView {
             tagListViewHeight.constant = tagListView.estimatedHeight
 
             if !isEstimateView {
-                profileImageView.setImageUrl(feed.userProfileImageUrl)
+                profileImageView.imageUrl = feed.userProfileImageUrl
                 heartBtn.setImage(feed.isLike ? HEART_ON : HEART_OFF, for: .normal)
-                mainImageView.setImageUrl(feed.foodImageUrl)
+                mainImageView.imageUrl = feed.foodImageUrl
             }
         }
     }
@@ -91,8 +91,8 @@ class FeedCellContent: UIView {
         guard let feed = self.feed else {
             return
         }
-        
-        self.feed?.isLike = !feed.isLike
+
+        feed.isLike = !feed.isLike
         heartBtn.setImage(feed.isLike ? HEART_ON : HEART_OFF, for: .normal)
 
         ServerClient.toggleFeedLike(feedId: feed.feedId) { _ in
