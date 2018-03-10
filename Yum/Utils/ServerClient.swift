@@ -9,10 +9,9 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Toaster
 
 class ServerClient {
-    // TODO add error parameter
-
     static let HOST = "http://52.78.80.125:3003"
 
     static var userToken: String?
@@ -20,28 +19,31 @@ class ServerClient {
     static var user: User!
     static var userId: Int = -1
 
-    static func request(_ url: String, _ method: HTTPMethod, _ parameters: Parameters, callback: ((JSON?) -> Void)? = nil) {
+    static func request(_ url: String, _ method: HTTPMethod, _ parameters: Parameters, callback: ((JSON, Error?) -> Void)? = nil) {
         Alamofire.request(url, method: method, parameters: parameters).response { response in
+            if let error = response.error {
+                callback?(JSON(), error)
+                return
+            }
+
             guard let data = response.data else {
-                print(String(describing: response.request))
-                print(String(describing: response.response))
-                print(String(describing: response.data))
-                print(String(describing: response.error))
-                callback?(nil)
+                callback?(JSON(), ServerError("There is no data"))
                 return
             }
 
             let json = JSON(data)
+
 //            print("\(method) - \(url)")
 //            print(parameters)
 //            print(json)
-            callback?(json)
+
+            callback?(json, nil)
         }
     }
 
     static func login(facebookId: String,
                       name: String,
-                      callback: ((Bool) -> Void)? = nil) {
+                      callback: ((Error?) -> Void)? = nil) {
         let url = HOST + "/auth/facebook"
         let method: HTTPMethod = HTTPMethod.post
         let parameters: Parameters = [
@@ -49,44 +51,44 @@ class ServerClient {
             "facebookCode": facebookId
         ]
 
-        request(url, method, parameters) { json in
-            guard let json = json else {
-                callback?(false)
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(error)
                 return
             }
 
             if json["result"].exists() {
                 userId = json["result"].arrayValue.first!["id"].intValue
-                callback?(true)
+                callback?(nil)
             } else {
-                callback?(false)
+                callback?(ServerError(json))
             }
         }
     }
 
-    static func getFeedList(callback: (([Feed]) -> Void)? = nil) {
+    static func getFeedList(callback: (([Feed]?, Error?) -> Void)? = nil) {
         let url = HOST + "/feed"
         let method: HTTPMethod = HTTPMethod.get
         let parameters: Parameters = [
             "userId": ServerClient.userId
         ]
 
-        request(url, method, parameters) { json in
-            guard let json = json else {
-                callback?([Feed]())
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(nil, error)
                 return
             }
 
             if json["results"].exists() {
-                callback?(json["results"]["feedData"].arrayValue.map({ Feed(json: $0) }))
+                callback?(json["results"]["feedData"].arrayValue.map({ Feed(json: $0) }), nil)
             } else {
-                callback?([Feed]())
+                callback?(nil, ServerError(json))
             }
         }
     }
 
     static func getFeedDetail(feedId: Int,
-                              callback: ((Feed) -> Void)? = nil) {
+                              callback: ((Feed?, Error?) -> Void)? = nil) {
 
     }
 
@@ -94,7 +96,7 @@ class ServerClient {
                           calorie: Int,
                           tags: [String],
                           image: UIImage,
-                          callback: ((Feed?) -> Void)? = nil) {
+                          callback: ((Error?) -> Void)? = nil) {
         let url = HOST + "/feed"
         let imgData = UIImageJPEGRepresentation(image, 1)!
 
@@ -110,18 +112,9 @@ class ServerClient {
                 encodingCompletion: { encodingResult in
                     switch encodingResult {
                     case .success(let upload, _, _):
-                        upload.response { response in
-                            print(String(describing: response.request))
-                            print(String(describing: response.response))
-                            print(String(describing: response.data))
-                            print(String(describing: response.error))
-                            print(JSON(response.data!))
-                        }
+                        callback?(nil)
                     case .failure(let encodingError):
-                        print(encodingError)
-                    }
-                    getFeedList { feeds in
-                        callback?(feeds.filter({ $0.body == content && $0.calorie == calorie }).first)
+                        callback?(encodingError)
                     }
                 }
         )
@@ -132,70 +125,96 @@ class ServerClient {
                            calorie: Int,
                            tags: [String],
                            imgUrl: String,
-                           callback: ((Feed) -> Void)? = nil) {
+                           callback: ((Error?) -> Void)? = nil) {
 
     }
 
     static func deleteFeed(feedId: Int,
-                           callback: ((Bool) -> Void)? = nil) {
+                           callback: ((Error?) -> Void)? = nil) {
 
     }
 
     static func isLikeFeed(feedId: Int,
-                           callback: ((Bool) -> Void)? = nil) {
+                           callback: ((Bool?, Error?) -> Void)? = nil) {
         let url = HOST + "/feed/like/\(feedId)"
         let method: HTTPMethod = HTTPMethod.get
         let parameters: Parameters = [
             "userId": ServerClient.userId
         ]
 
-        request(url, method, parameters) { json in
-            guard let json = json else {
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(nil, error)
                 return
             }
 
             if json["code"].intValue == 1 {
-                callback?(json["isLike"].boolValue)
+                callback?(json["isLike"].boolValue, nil)
+            } else {
+                callback?(nil, ServerError(json))
             }
         }
     }
 
     static func likeFeed(feedId: Int,
-                         callback: ((Bool) -> Void)? = nil) {
+                         callback: ((Error?) -> Void)? = nil) {
         let url = HOST + "/feed/like/\(feedId)"
         let method: HTTPMethod = HTTPMethod.post
         let parameters: Parameters = [
             "userId": ServerClient.userId
         ]
 
-        request(url, method, parameters) { json in
-            callback?(true)
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(error)
+                return
+            }
+
+            callback?(nil)
         }
     }
 
     static func unlikeFeed(feedId: Int,
-                           callback: ((Bool) -> Void)? = nil) {
+                           callback: ((Error?) -> Void)? = nil) {
         let url = HOST + "/feed/like/\(feedId)"
         let method: HTTPMethod = HTTPMethod.delete
         let parameters: Parameters = [
             "userId": ServerClient.userId
         ]
 
-        request(url, method, parameters) { json in
-            callback?(true)
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(error)
+                return
+            }
+
+            callback?(nil)
         }
     }
 
     static func toggleFeedLike(feedId: Int,
-                               callback: ((Bool) -> Void)? = nil) {
-        isLikeFeed(feedId: feedId) { isLike in
+                               callback: ((Error?) -> Void)? = nil) {
+        isLikeFeed(feedId: feedId) { isLike, error in
+            guard let isLike = isLike else {
+                CrashUtil.process(error)
+                return
+            }
+
             if isLike {
-                unlikeFeed(feedId: feedId) { success in
-                    callback?(success)
+                unlikeFeed(feedId: feedId) { error in
+                    if let error = error {
+                        callback?(error)
+                    } else {
+                        callback?(nil)
+                    }
                 }
             } else {
-                likeFeed(feedId: feedId) { success in
-                    callback?(success)
+                likeFeed(feedId: feedId) { error in
+                    if let error = error {
+                        callback?(error)
+                    } else {
+                        callback?(nil)
+                    }
                 }
             }
         }
@@ -205,7 +224,7 @@ class ServerClient {
                        endCalorie: Int,
                        tag: String?,
                        userName: String?,
-                       callback: (([Feed]) -> Void)? = nil) {
+                       callback: (([Feed]?, Error?) -> Void)? = nil) {
         let url = HOST + "/search"
         let method: HTTPMethod = HTTPMethod.get
         var parameters: Parameters = [
@@ -218,63 +237,75 @@ class ServerClient {
             parameters["nickname"] = userName
         }
 
-        request(url, method, parameters) { json in
-            guard let json = json else {
-                callback?([Feed]())
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(nil, error)
                 return
             }
 
             if json["results"].exists() {
-                callback?(json["results"]["feedData"].arrayValue.map({ Feed(json: $0) }))
+                callback?(json["results"]["feedData"].arrayValue.map({ Feed(json: $0) }), nil)
             } else {
-                callback?([Feed]())
+                callback?(nil, ServerError(json))
             }
         }
     }
 
     static func getUserDetail(userName: String,
-                              callback: ((User?) -> Void)? = nil) {
+                              callback: ((User?, Error?) -> Void)? = nil) {
         let url = HOST + "/user/\(ServerClient.userId)"
         let method: HTTPMethod = HTTPMethod.get
         let parameters: Parameters = [:]
 
-        request(url, method, parameters) { json in
-            guard let json = json else {
-                callback?(nil)
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(nil, error)
                 return
             }
 
             if json["result"].exists() {
-                callback?(User(json: json["result"].arrayValue.first!))
+                callback?(User(json: json["result"].arrayValue.first!), nil)
             } else {
-                callback?(nil)
+                callback?(nil, ServerError(json))
             }
         }
     }
 
     static func getUserFeedList(page: Int,
                                 userName: String,
-                                callback: (([Feed]) -> Void)? = nil) {
+                                callback: (([Feed]?, Error?) -> Void)? = nil) {
         let url = HOST + "/user/\(ServerClient.userId)/feeds"
         let method: HTTPMethod = HTTPMethod.get
         let parameters: Parameters = [:]
 
-        request(url, method, parameters) { json in
-            guard let json = json else {
-                callback?([Feed]())
+        request(url, method, parameters) { json, error in
+            if let error = error {
+                callback?(nil, error)
                 return
             }
 
             if json["result"].exists() {
-                callback?(json["result"].arrayValue.map({ Feed(json: $0) }))
+                callback?(json["result"].arrayValue.map({ Feed(json: $0) }), nil)
             } else {
-                callback?([Feed]())
+                callback?(nil, ServerError(json))
             }
         }
     }
 
     static func getNotiList(page: Int,
-                            callback: (([Noti]) -> Void)? = nil) {
+                            callback: (([Noti]?, Error?) -> Void)? = nil) {
 
+    }
+}
+
+struct ServerError: Error {
+    let msg: String
+
+    init(_ msg: String) {
+        self.msg = msg
+    }
+
+    init(_ json: JSON) {
+        self.init(String(describing: json))
     }
 }

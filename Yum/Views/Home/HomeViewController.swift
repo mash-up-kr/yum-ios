@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 class HomeViewController: UIViewController {
     private var cellForEstimate: FeedCellContent!
@@ -25,7 +26,12 @@ class HomeViewController: UIViewController {
 
         tableView.initiate(self)
 
-        ServerClient.getFeedList { feeds in
+        ServerClient.getFeedList { feeds, error in
+            guard let feeds = feeds else {
+                CrashUtil.process(error)
+                return
+            }
+            
             DispatchQueue.main.async {
                 self.tableView.feeds = feeds
             }

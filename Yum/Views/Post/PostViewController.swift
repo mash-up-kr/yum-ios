@@ -68,7 +68,12 @@ class PostViewController: UIViewController {
             return
         }
 
-        ServerClient.writeFeed(content: content, calorie: calorie, tags: [], image: self.imageView.image!) { _ in
+        ServerClient.writeFeed(content: content, calorie: calorie, tags: [], image: self.imageView.image!) { error in
+            if let error = error {
+                CrashUtil.process(error)
+                return
+            }
+
             DispatchQueue.main.async {
                 self.dismiss(animated: true, completion: nil)
             }

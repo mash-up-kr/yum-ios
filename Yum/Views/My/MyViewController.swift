@@ -26,8 +26,9 @@ class MyViewController: UIViewController {
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileImage.layer.masksToBounds = true
         
-        ServerClient.getUserDetail(userName: self.userName) { user in
+        ServerClient.getUserDetail(userName: self.userName) { user, error in
             guard let user = user else {
+                CrashUtil.process(error)
                 return
             }
             
@@ -42,7 +43,12 @@ class MyViewController: UIViewController {
             }
         }
         
-        ServerClient.getUserFeedList(page: 0, userName: self.userName) { feeds in
+        ServerClient.getUserFeedList(page: 0, userName: self.userName) { feeds, error in
+            guard let feeds = feeds else {
+                CrashUtil.process(error)
+                return
+            }
+
             DispatchQueue.main.async {
                 self.collectionView.initiate(feeds, self)
             }

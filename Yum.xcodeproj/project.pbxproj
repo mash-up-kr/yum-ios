@@ -21,6 +21,7 @@
 		277B942D2052BA6600FB4A62 /* FeedCellContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277B942C2052BA6600FB4A62 /* FeedCellContent.xib */; };
 		277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BABAA1FADE75900A11BA0 /* PostViewController.swift */; };
 		277BABAD1FADE7B000A11BA0 /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */; };
+		278195ED20538A0D006BC81E /* CrashUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278195EC20538A0D006BC81E /* CrashUtil.swift */; };
 		27950EC82010C55200472BAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27950EC72010C55200472BAF /* LoginViewController.swift */; };
 		27950ECA2010C55900472BAF /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950EC92010C55900472BAF /* LoginViewController.storyboard */; };
 		27950ED92011E22F00472BAF /* NotiViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27950ED82011E22F00472BAF /* NotiViewController.storyboard */; };
@@ -86,6 +87,7 @@
 		277B942C2052BA6600FB4A62 /* FeedCellContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCellContent.xib; sourceTree = "<group>"; };
 		277BABAA1FADE75900A11BA0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		277BABAC1FADE7B000A11BA0 /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
+		278195EC20538A0D006BC81E /* CrashUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashUtil.swift; sourceTree = "<group>"; };
 		27950EC72010C55200472BAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		27950EC92010C55900472BAF /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		27950ED82011E22F00472BAF /* NotiViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotiViewController.storyboard; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				27E811BE202429B600DF8244 /* ServerClient.swift */,
 				272E7E92204044E100EB8DEC /* LoginManager.swift */,
 				277A0CDB204D02BF00F23A36 /* Extensions+Yum.swift */,
+				278195EC20538A0D006BC81E /* CrashUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				277BABAB1FADE75900A11BA0 /* PostViewController.swift in Sources */,
 				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,
 				27950EC82010C55200472BAF /* LoginViewController.swift in Sources */,
+				278195ED20538A0D006BC81E /* CrashUtil.swift in Sources */,
 				27E811C920244EFF00DF8244 /* MyCollectionView.swift in Sources */,
 				A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */,
 				272E7E93204044E100EB8DEC /* LoginManager.swift in Sources */,

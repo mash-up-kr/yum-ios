@@ -24,13 +24,14 @@ class LoginViewController: UIViewController {
     }
     
     func login(_ facebookId: String, _ name: String) {
-        ServerClient.login(facebookId: facebookId, name: name) { success in
+        ServerClient.login(facebookId: facebookId, name: name) { error in
+            if let error = error {
+                CrashUtil.process(error)
+                return
+            }
+
             DispatchQueue.main.async {
-                if success {
-                    self.dismiss(animated: true)
-                } else {
-                    Toast(text: "login error").show()
-                }
+                self.dismiss(animated: true)
             }
         }
     }

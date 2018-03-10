@@ -13,7 +13,12 @@ class NotiTableView: UITableView {
     var notis: [Noti] = []
     
     func initiate() {
-        ServerClient.getNotiList(page: 0) { notis in
+        ServerClient.getNotiList(page: 0) { notis, error in
+            guard let notis = notis else {
+                CrashUtil.process(error)
+                return
+            }
+            
             DispatchQueue.main.async {
                 self.notis = notis
                 self.register(UINib(nibName: self.CELL_NAME, bundle: nil), forCellReuseIdentifier: self.CELL_NAME)

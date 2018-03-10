@@ -21,7 +21,12 @@ final class SearchResultViewController: UIViewController {
 
         tableView.initiate(self)
 
-        ServerClient.search(startCalorie: startCalorie, endCalorie: endCalorie, tag: tag, userName: userName) { feeds in
+        ServerClient.search(startCalorie: startCalorie, endCalorie: endCalorie, tag: tag, userName: userName) { feeds, error in
+            guard let feeds = feeds else {
+                CrashUtil.process(error)
+                return
+            }
+
             DispatchQueue.main.async {
                 self.tableView.feeds = feeds
             }
