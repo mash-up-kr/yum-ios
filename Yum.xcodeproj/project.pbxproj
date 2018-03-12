@@ -47,6 +47,8 @@
 		27E811E02024784900DF8244 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811DF2024784900DF8244 /* SearchResultViewController.swift */; };
 		27E811E22024785300DF8244 /* SearchResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E811E12024785300DF8244 /* SearchResultViewController.storyboard */; };
 		27E811E420247A8800DF8244 /* SearchResultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E811E320247A8800DF8244 /* SearchResultNavigationController.swift */; };
+		27F98C652056806A008C2BEF /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F98C642056806A008C2BEF /* TagView.swift */; };
+		27F98C6720568073008C2BEF /* TagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F98C6620568073008C2BEF /* TagView.xib */; };
 		A60B8D6B1FAE3D6E00B81622 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60B8D6A1FAE3D6E00B81622 /* Async.swift */; };
 		A65BCBFB1FAE636900474AFA /* AlamofireLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65BCBFA1FAE636900474AFA /* AlamofireLogger.swift */; };
 		A67690611FADDD7B00B9FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690601FADDD7B00B9FCEF /* AppDelegate.swift */; };
@@ -113,6 +115,8 @@
 		27E811DF2024784900DF8244 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		27E811E12024785300DF8244 /* SearchResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResultViewController.storyboard; sourceTree = "<group>"; };
 		27E811E320247A8800DF8244 /* SearchResultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultNavigationController.swift; sourceTree = "<group>"; };
+		27F98C642056806A008C2BEF /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		27F98C6620568073008C2BEF /* TagView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagView.xib; sourceTree = "<group>"; };
 		724657326AEB08C3FDE78ED8 /* Pods-Yum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yum/Pods-Yum.debug.xcconfig"; sourceTree = "<group>"; };
 		872B75EE6CF321E323619E70 /* Pods_Yum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60B8D6A1FAE3D6E00B81622 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
@@ -344,6 +348,8 @@
 				277A0CD7204CFD7300F23A36 /* TagListView.xib */,
 				277A0CD9204D00A700F23A36 /* TagListView.swift */,
 				27BBC69E204F753A00DC61B5 /* LoadingImageView.swift */,
+				27F98C642056806A008C2BEF /* TagView.swift */,
+				27F98C6620568073008C2BEF /* TagView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				2742C4C8204E1BA0006D7529 /* NanumSquareOTFBold.otf in Resources */,
 				277A0CD8204CFD7300F23A36 /* TagListView.xib in Resources */,
 				27950EE42011E36C00472BAF /* NotiNavigationController.storyboard in Resources */,
+				27F98C6720568073008C2BEF /* TagView.xib in Resources */,
 				A67690681FADDD7B00B9FCEF /* Assets.xcassets in Resources */,
 				A67690661FADDD7B00B9FCEF /* TabBarController.storyboard in Resources */,
 				27950EE82011E39400472BAF /* MyNavigtaionController.storyboard in Resources */,
@@ -588,6 +595,7 @@
 				A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */,
 				27950EC82010C55200472BAF /* LoginViewController.swift in Sources */,
 				278195ED20538A0D006BC81E /* CrashUtil.swift in Sources */,
+				27F98C652056806A008C2BEF /* TagView.swift in Sources */,
 				27E811C920244EFF00DF8244 /* MyCollectionView.swift in Sources */,
 				A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */,
 				272E7E93204044E100EB8DEC /* LoginManager.swift in Sources */,

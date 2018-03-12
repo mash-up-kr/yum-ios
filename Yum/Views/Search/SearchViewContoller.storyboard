@@ -32,6 +32,14 @@
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sp-e8-Ld0" customClass="TagView" customModule="Yum" customModuleProvider="target">
+                                <rect key="frame" x="127" y="56" width="120" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Gtq-fH-VXs"/>
+                                    <constraint firstAttribute="width" constant="120" id="nVN-8M-GaM"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-6M-UVE" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
                                 <rect key="frame" x="8" y="86" width="359" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,11 +106,22 @@
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-Ay-OyX" customClass="TagView" customModule="Yum" customModuleProvider="target">
+                                <rect key="frame" x="127" y="206" width="120" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="KMx-Lp-Aev"/>
+                                    <constraint firstAttribute="width" constant="120" id="yX5-rv-GUm"/>
+                                </constraints>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="재료로 검색하기" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Xr-Sp-l9t">
                                 <rect key="frame" x="16" y="239" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="nIk-de-D8m" eventType="editingChanged" id="OdF-iz-4vU"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOm-xv-4Me" userLabel="Divider">
                                 <rect key="frame" x="0.0" y="313" width="375" height="1"/>
@@ -120,11 +139,22 @@
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-xF-eAn" customClass="TagView" customModule="Yum" customModuleProvider="target">
+                                <rect key="frame" x="127" y="349" width="120" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="B64-o5-cMJ"/>
+                                    <constraint firstAttribute="height" constant="20" id="gVf-JV-9VB"/>
+                                </constraints>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자로 검색하기" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLY-TJ-HRy">
                                 <rect key="frame" x="16" y="381.5" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="nIk-de-D8m" eventType="editingChanged" id="tFG-5M-MEb"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhg-pU-sST" userLabel="Divider">
                                 <rect key="frame" x="0.0" y="455.5" width="375" height="1"/>
@@ -133,33 +163,21 @@
                                     <constraint firstAttribute="height" constant="1" id="yGY-bo-tg0"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ~ 700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-7e-unN" customClass="RoundLabel" customModule="Yum" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="55" width="59.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아보카도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtX-DH-OUq" customClass="RoundLabel" customModule="Yum" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="205.5" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하핳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEx-oo-xGn" customClass="RoundLabel" customModule="Yum" customModuleProvider="target">
-                                <rect key="frame" x="172.5" y="348" width="29.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3i-5F-gZD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3i-5F-gZD" customClass="GraphicButton" customModule="Yum" customModuleProvider="target">
                                 <rect key="frame" x="16" y="492.5" width="342" height="36"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.84705882349999995" blue="0.62745098040000002" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="i8N-0j-vna"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="14"/>
                                 <state key="normal" title="이 옵션으로 검색하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="searchBtnClicked" destination="nIk-de-D8m" eventType="touchUpInside" id="h9e-SK-009"/>
                                 </connections>
@@ -175,34 +193,34 @@
                             <constraint firstItem="KLY-TJ-HRy" firstAttribute="centerX" secondItem="9YF-Ic-p2f" secondAttribute="centerX" id="7gD-N6-VYB"/>
                             <constraint firstItem="41E-eq-sY7" firstAttribute="leading" secondItem="6K3-Y9-tkt" secondAttribute="trailing" constant="6" id="7mt-SD-o1j"/>
                             <constraint firstItem="Fhg-pU-sST" firstAttribute="leading" secondItem="9YF-Ic-p2f" secondAttribute="leading" id="AmT-qA-hpT"/>
-                            <constraint firstItem="RtX-DH-OUq" firstAttribute="centerX" secondItem="LiA-7e-unN" secondAttribute="centerX" id="Cpz-df-1PG"/>
+                            <constraint firstItem="Yy5-xF-eAn" firstAttribute="centerY" secondItem="41E-eq-sY7" secondAttribute="centerY" id="BSs-YW-bvm"/>
+                            <constraint firstItem="3sp-e8-Ld0" firstAttribute="centerY" secondItem="xg4-Gl-Qf6" secondAttribute="centerY" id="ERG-0K-Iga"/>
                             <constraint firstItem="f3i-5F-gZD" firstAttribute="top" secondItem="Fhg-pU-sST" secondAttribute="bottom" constant="36" id="FK8-aq-veL"/>
                             <constraint firstItem="Nk3-ht-hIV" firstAttribute="trailing" secondItem="Ofy-6M-UVE" secondAttribute="trailing" constant="8" id="MTz-cf-g0T"/>
                             <constraint firstItem="f3i-5F-gZD" firstAttribute="centerX" secondItem="9YF-Ic-p2f" secondAttribute="centerX" id="QuK-cE-jxx"/>
-                            <constraint firstItem="JEx-oo-xGn" firstAttribute="centerX" secondItem="RtX-DH-OUq" secondAttribute="centerX" id="U6s-eG-Ulf"/>
                             <constraint firstItem="41E-eq-sY7" firstAttribute="centerY" secondItem="6K3-Y9-tkt" secondAttribute="centerY" id="Vag-qh-g7W"/>
                             <constraint firstItem="xg4-Gl-Qf6" firstAttribute="leading" secondItem="YaC-XF-ZDj" secondAttribute="trailing" constant="6" id="Xl3-Gb-eB6"/>
                             <constraint firstItem="YOm-xv-4Me" firstAttribute="top" secondItem="9Xr-Sp-l9t" secondAttribute="bottom" constant="44" id="Xls-A6-ioy"/>
                             <constraint firstItem="63A-Df-k3k" firstAttribute="leading" secondItem="Nk3-ht-hIV" secondAttribute="leading" id="Y9L-XT-6H0"/>
-                            <constraint firstItem="LiA-7e-unN" firstAttribute="centerX" secondItem="9YF-Ic-p2f" secondAttribute="centerX" id="ZaO-5R-eaa"/>
+                            <constraint firstItem="Yy5-xF-eAn" firstAttribute="centerX" secondItem="utQ-Ay-OyX" secondAttribute="centerX" id="aJz-ZH-vRi"/>
                             <constraint firstItem="f3i-5F-gZD" firstAttribute="leading" secondItem="6K3-Y9-tkt" secondAttribute="leading" id="bFd-Bv-USB"/>
                             <constraint firstItem="YOm-xv-4Me" firstAttribute="leading" secondItem="9YF-Ic-p2f" secondAttribute="leading" id="bt8-QW-aqY"/>
                             <constraint firstAttribute="trailing" secondItem="Fhg-pU-sST" secondAttribute="trailing" id="cgQ-nR-FSU"/>
-                            <constraint firstItem="RtX-DH-OUq" firstAttribute="centerY" secondItem="VCo-62-PUC" secondAttribute="centerY" id="eZO-Ma-2ES"/>
                             <constraint firstItem="a6O-66-IEt" firstAttribute="top" secondItem="63A-Df-k3k" secondAttribute="bottom" constant="36" id="gsZ-KO-0a5"/>
                             <constraint firstItem="Ofy-6M-UVE" firstAttribute="leading" secondItem="Nk3-ht-hIV" secondAttribute="leading" constant="8" id="hQ4-wd-GUc"/>
+                            <constraint firstItem="utQ-Ay-OyX" firstAttribute="centerY" secondItem="VCo-62-PUC" secondAttribute="centerY" id="hVw-MP-IEJ"/>
                             <constraint firstItem="VCo-62-PUC" firstAttribute="centerY" secondItem="a6O-66-IEt" secondAttribute="centerY" id="i0i-aF-OGa"/>
                             <constraint firstItem="KLY-TJ-HRy" firstAttribute="leading" secondItem="9Xr-Sp-l9t" secondAttribute="leading" id="lDO-9c-TVE"/>
+                            <constraint firstItem="utQ-Ay-OyX" firstAttribute="centerX" secondItem="3sp-e8-Ld0" secondAttribute="centerX" id="n1a-60-bRD"/>
                             <constraint firstItem="KLY-TJ-HRy" firstAttribute="top" secondItem="41E-eq-sY7" secondAttribute="bottom" constant="15" id="ogQ-Vi-8k8"/>
+                            <constraint firstItem="3sp-e8-Ld0" firstAttribute="centerX" secondItem="Nk3-ht-hIV" secondAttribute="centerX" id="qvB-vG-UEK"/>
                             <constraint firstItem="xg4-Gl-Qf6" firstAttribute="centerY" secondItem="YaC-XF-ZDj" secondAttribute="centerY" id="rFH-tF-bI1"/>
                             <constraint firstItem="Ofy-6M-UVE" firstAttribute="top" secondItem="YaC-XF-ZDj" secondAttribute="bottom" constant="12" id="swZ-NA-IaD"/>
                             <constraint firstItem="Fhg-pU-sST" firstAttribute="top" secondItem="KLY-TJ-HRy" secondAttribute="bottom" constant="44" id="szK-EW-XsH"/>
                             <constraint firstAttribute="trailing" secondItem="YOm-xv-4Me" secondAttribute="trailing" id="tFo-qh-liw"/>
                             <constraint firstItem="a6O-66-IEt" firstAttribute="leading" secondItem="YaC-XF-ZDj" secondAttribute="leading" id="uH6-xR-JxF"/>
                             <constraint firstItem="6K3-Y9-tkt" firstAttribute="leading" secondItem="a6O-66-IEt" secondAttribute="leading" id="x6g-4h-Zen"/>
-                            <constraint firstItem="JEx-oo-xGn" firstAttribute="centerY" secondItem="41E-eq-sY7" secondAttribute="centerY" id="xVg-cC-bSc"/>
                             <constraint firstItem="63A-Df-k3k" firstAttribute="top" secondItem="Ofy-6M-UVE" secondAttribute="bottom" constant="24" id="yOG-xx-p8B"/>
-                            <constraint firstItem="LiA-7e-unN" firstAttribute="centerY" secondItem="xg4-Gl-Qf6" secondAttribute="centerY" id="yPn-cC-wDr"/>
                             <constraint firstItem="9Xr-Sp-l9t" firstAttribute="top" secondItem="VCo-62-PUC" secondAttribute="bottom" constant="15" id="ydQ-kr-Lg0"/>
                             <constraint firstItem="YaC-XF-ZDj" firstAttribute="top" secondItem="Nk3-ht-hIV" secondAttribute="top" constant="36" id="zI9-qx-cNK"/>
                             <constraint firstItem="63A-Df-k3k" firstAttribute="trailing" secondItem="Nk3-ht-hIV" secondAttribute="trailing" id="zIh-V9-imb"/>
@@ -210,17 +228,17 @@
                         <viewLayoutGuide key="safeArea" id="Nk3-ht-hIV"/>
                     </view>
                     <connections>
-                        <outlet property="calorieLabel" destination="LiA-7e-unN" id="FIY-9c-SSu"/>
                         <outlet property="calorieSlider" destination="Ofy-6M-UVE" id="xLA-kU-GS0"/>
+                        <outlet property="calorieTagView" destination="3sp-e8-Ld0" id="68m-v9-sk1"/>
                         <outlet property="materialField" destination="9Xr-Sp-l9t" id="mmA-99-dnu"/>
-                        <outlet property="materialLabel" destination="RtX-DH-OUq" id="ddv-is-Yf4"/>
+                        <outlet property="materialTagView" destination="utQ-Ay-OyX" id="92R-q1-eOv"/>
                         <outlet property="userField" destination="KLY-TJ-HRy" id="ffe-vv-Bbh"/>
-                        <outlet property="userLabel" destination="JEx-oo-xGn" id="UyV-6F-2zp"/>
+                        <outlet property="userTagView" destination="Yy5-xF-eAn" id="0kd-VR-kT8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBd-tS-oqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="164"/>
+            <point key="canvasLocation" x="112.8" y="163.26836581709148"/>
         </scene>
     </scenes>
     <resources>
