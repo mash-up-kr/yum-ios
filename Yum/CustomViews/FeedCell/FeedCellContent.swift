@@ -11,8 +11,8 @@ import Toaster
 
 class FeedCellContent: UIView {
 
-    let HEART_ON = #imageLiteral(resourceName:"btn-heart-on")
-    let HEART_OFF = #imageLiteral(resourceName:"btn-heart-off")
+    let HEART_ON = #imageLiteral(resourceName: "btn-heart-on")
+    let HEART_OFF = #imageLiteral(resourceName: "btn-heart-off")
 
     @IBOutlet private weak var rootWidth: NSLayoutConstraint!
     @IBOutlet private weak var profileImageView: LoadingImageView!

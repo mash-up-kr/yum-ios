@@ -15,9 +15,7 @@ class TagListView: UIView {
 
     private var mEstimatedHeight = CGFloat(0)
     var estimatedHeight: CGFloat {
-        get {
-            return mEstimatedHeight
-        }
+        return mEstimatedHeight
     }
 
     @IBOutlet private weak var calorieLabel: GraphicLabel!

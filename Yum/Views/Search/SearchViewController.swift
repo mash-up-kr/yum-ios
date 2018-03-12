@@ -1,5 +1,5 @@
 //
-//  SearchViewContoller.swift
+//  SearchViewController.swift
 //  Yum
 //
 //  Created by Ryan Yoo on 2017. 11. 4..
@@ -9,7 +9,7 @@
 import UIKit
 import RangeSeekSlider
 
-class SearchViewContoller: UIViewController {
+class SearchViewController: UIViewController {
     @IBOutlet weak var calorieTagView: TagView!
     @IBOutlet weak var calorieSlider: RangeSeekSlider!
     @IBOutlet weak var materialTagView: TagView!
@@ -83,13 +83,13 @@ class SearchViewContoller: UIViewController {
     }
 }
 
-extension SearchViewContoller: RangeSeekSliderDelegate {
+extension SearchViewController: RangeSeekSliderDelegate {
     func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
         updateUI()
     }
 }
 
-extension SearchViewContoller: UITextFieldDelegate {
+extension SearchViewController: UITextFieldDelegate {
     @IBAction func textFieldChanged(_ textField: UITextField) {
         let content = textField.text ?? ""
 

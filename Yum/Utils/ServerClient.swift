@@ -111,7 +111,7 @@ class ServerClient {
                 to: url,
                 encodingCompletion: { encodingResult in
                     switch encodingResult {
-                    case .success(let upload, _, _):
+                    case .success:
                         callback?(nil)
                     case .failure(let encodingError):
                         callback?(encodingError)
@@ -164,7 +164,7 @@ class ServerClient {
             "userId": ServerClient.userId
         ]
 
-        request(url, method, parameters) { json, error in
+        request(url, method, parameters) { _, error in
             if let error = error {
                 callback?(error)
                 return
@@ -182,7 +182,7 @@ class ServerClient {
             "userId": ServerClient.userId
         ]
 
-        request(url, method, parameters) { json, error in
+        request(url, method, parameters) { _, error in
             if let error = error {
                 callback?(error)
                 return

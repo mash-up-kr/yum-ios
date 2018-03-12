@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-340" y="90"/>
         </scene>
-        <!--SearchViewContoller-->
+        <!--SearchViewController-->
         <scene sceneID="f7M-Fi-yUV">
             <objects>
-                <viewControllerPlaceholder storyboardName="SearchViewContoller" referencedIdentifier="SearchViewContoller" id="fCe-4d-puh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SearchViewController" referencedIdentifier="SearchViewController" id="fCe-4d-puh" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="8fl-MM-0C5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUR-bB-ziT" userLabel="First Responder" sceneMemberID="firstResponder"/>

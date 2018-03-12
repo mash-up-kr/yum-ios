@@ -4,6 +4,9 @@ platform :ios, '10.0'
 target 'Yum' do
   use_frameworks!
 
+  # ignore all warnings from all pods
+  inhibit_all_warnings!
+
   pod 'SwiftLint'
   pod 'SwiftyJSON'
   

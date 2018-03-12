@@ -13,9 +13,7 @@ import SwiftyJSON
 class LoginManager {
 
     static var isLogin: Bool {
-        get {
-            return FBSDKAccessToken.current() != nil
-        }
+        return FBSDKAccessToken.current() != nil
     }
 
     static func login(_ vc: UIViewController, callback: ((String, String) -> Void)? = nil) {
@@ -34,8 +32,8 @@ class LoginManager {
 
     private static func getUserID(_ vc: UIViewController, callback: ((String) -> Void)? = nil) {
         let loginManager = FBSDKLoginManager()
-        loginManager.logIn(withReadPermissions: ["public_profile"], from: vc) { (result, error) -> Void in
-            if let _ = error {
+        loginManager.logIn(withReadPermissions: ["public_profile"], from: vc) { (result, error) in
+            if error != nil {
                 return
             }
 
@@ -50,7 +48,11 @@ class LoginManager {
     private static func getUserName(callback: ((String) -> Void)? = nil) {
         let parameters = ["fields": "first_name, last_name"]
 
-        FBSDKGraphRequest(graphPath: "me", parameters: parameters).start(completionHandler: { (connection, result, error) in
+        FBSDKGraphRequest(graphPath: "me", parameters: parameters).start(completionHandler: { (_, result, error) in
+            if error != nil {
+                return
+            }
+            
             let json = JSON(result!)
             let name: String = json["last_name"].stringValue + json["first_name"].stringValue
             callback?(name)

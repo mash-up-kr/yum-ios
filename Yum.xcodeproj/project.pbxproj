@@ -59,9 +59,9 @@
 		A676907A1FADE12B00B9FCEF /* NSObject+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690791FADE12B00B9FCEF /* NSObject+Yum.swift */; };
 		A676907D1FADE86100B9FCEF /* UIStoryboard+Yum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676907C1FADE86100B9FCEF /* UIStoryboard+Yum.swift */; };
 		A676907F1FADE89500B9FCEF /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676907E1FADE89500B9FCEF /* HomeViewController.storyboard */; };
-		A67690821FADE8AD00B9FCEF /* SearchViewContoller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67690811FADE8AD00B9FCEF /* SearchViewContoller.storyboard */; };
+		A67690821FADE8AD00B9FCEF /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67690811FADE8AD00B9FCEF /* SearchViewController.storyboard */; };
 		A67690841FADE91100B9FCEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690831FADE91100B9FCEF /* HomeViewController.swift */; };
-		A67690861FADE94300B9FCEF /* SearchViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690851FADE94300B9FCEF /* SearchViewContoller.swift */; };
+		A67690861FADE94300B9FCEF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67690851FADE94300B9FCEF /* SearchViewController.swift */; };
 		A67690891FADEA0900B9FCEF /* HomeNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A67690881FADEA0900B9FCEF /* HomeNavigationController.storyboard */; };
 		A676908B1FADEA3100B9FCEF /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A676908A1FADEA3100B9FCEF /* HomeNavigationController.swift */; };
 		A676908D1FADEA6F00B9FCEF /* SearchNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A676908C1FADEA6F00B9FCEF /* SearchNavigationController.storyboard */; };
@@ -131,9 +131,9 @@
 		A67690791FADE12B00B9FCEF /* NSObject+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Yum.swift"; sourceTree = "<group>"; };
 		A676907C1FADE86100B9FCEF /* UIStoryboard+Yum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Yum.swift"; sourceTree = "<group>"; };
 		A676907E1FADE89500B9FCEF /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
-		A67690811FADE8AD00B9FCEF /* SearchViewContoller.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewContoller.storyboard; sourceTree = "<group>"; };
+		A67690811FADE8AD00B9FCEF /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		A67690831FADE91100B9FCEF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A67690851FADE94300B9FCEF /* SearchViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewContoller.swift; sourceTree = "<group>"; };
+		A67690851FADE94300B9FCEF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A67690881FADEA0900B9FCEF /* HomeNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeNavigationController.storyboard; sourceTree = "<group>"; };
 		A676908A1FADEA3100B9FCEF /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		A676908C1FADEA6F00B9FCEF /* SearchNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchNavigationController.storyboard; sourceTree = "<group>"; };
@@ -331,8 +331,8 @@
 			children = (
 				A676908C1FADEA6F00B9FCEF /* SearchNavigationController.storyboard */,
 				A676908E1FADEA9000B9FCEF /* SearchNavigationController.swift */,
-				A67690811FADE8AD00B9FCEF /* SearchViewContoller.storyboard */,
-				A67690851FADE94300B9FCEF /* SearchViewContoller.swift */,
+				A67690811FADE8AD00B9FCEF /* SearchViewController.storyboard */,
+				A67690851FADE94300B9FCEF /* SearchViewController.swift */,
 				27E811DF2024784900DF8244 /* SearchResultViewController.swift */,
 				27E811E12024785300DF8244 /* SearchResultViewController.storyboard */,
 				27E811E320247A8800DF8244 /* SearchResultNavigationController.swift */,
@@ -438,7 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2742C4C9204E1BA0006D7529 /* NanumSquareOTFLight.otf in Resources */,
-				A67690821FADE8AD00B9FCEF /* SearchViewContoller.storyboard in Resources */,
+				A67690821FADE8AD00B9FCEF /* SearchViewController.storyboard in Resources */,
 				2742C4CA204E1BA0006D7529 /* NanumSquareOTFRegular.otf in Resources */,
 				A676907F1FADE89500B9FCEF /* HomeViewController.storyboard in Resources */,
 				277B942D2052BA6600FB4A62 /* FeedCellContent.xib in Resources */,
@@ -572,7 +572,7 @@
 				A6E3C0911FAE18A200F60DB1 /* Feed.swift in Sources */,
 				27E811C720244A3600DF8244 /* User.swift in Sources */,
 				27E811D820246E8800DF8244 /* Noti.swift in Sources */,
-				A67690861FADE94300B9FCEF /* SearchViewContoller.swift in Sources */,
+				A67690861FADE94300B9FCEF /* SearchViewController.swift in Sources */,
 				27E811D020245B5B00DF8244 /* FeedViewController.swift in Sources */,
 				A676908F1FADEA9000B9FCEF /* SearchNavigationController.swift in Sources */,
 				277A0CDA204D00A700F23A36 /* TagListView.swift in Sources */,

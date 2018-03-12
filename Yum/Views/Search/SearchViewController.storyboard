@@ -18,7 +18,7 @@
         <!--검색 하기-->
         <scene sceneID="NBy-ef-OTg">
             <objects>
-                <viewController storyboardIdentifier="SearchViewContoller" title="검색 하기" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nIk-de-D8m" customClass="SearchViewContoller" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" title="검색 하기" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nIk-de-D8m" customClass="SearchViewController" customModule="Yum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9YF-Ic-p2f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
